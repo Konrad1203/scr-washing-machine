@@ -18,7 +18,21 @@ System odwzorowuje podstawowe cykle prania i obsługiwany jest przez użytkownik
 
 ## Spis komponentów AADL z komentarzem 
 
-...
+| Typ komponentu | Nazwa komponentu | Opis |
+| -------------- | ---------------- | ---- |
+| device | WasherMotor | silnik do obracania bębna |
+| device | WaterValve | zawór elektroniczny do wody |
+| device | WaterLevelSensor | czujnik kontrolujący poziom wody w bębnie |
+| device | WaterPump | pompa wyciągająca wodę z bębna |
+| device | WaterHeater | grzejnik do wody |
+| device | TemperatureSensor | czujnik temperatury wody w zbiorniku |
+| device | DoorClosedSensor | czujnik zakmnięcia drzwiczek |
+| device | DoorLock | zamek do blokowania drzwi |
+| device | UserScreen | ekran sterowania pralką |
+| device | ModeChangeKnob | pokrętło do zmiany trybu pralki |
+| processor | Microcontroller | procesor do sterowania pracą pralki |
+| memory | MainMemory | pamięć do przechowywania ostatnich ustawień programu użytkownika |
+| bus | SystemBus | magistrala systemowa do przesyłania danych i sygnałów |
 
 
 ## Model - rysunek

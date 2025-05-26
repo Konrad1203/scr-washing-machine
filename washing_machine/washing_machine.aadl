@@ -1,4 +1,138 @@
 package washing_machine
 public
+	with Base_Types;
+	with Data_Model;
 	
+	----- TYPES -----
+	
+	data WashingData
+		properties
+			Data_Model::Data_Representation => STRUCT;
+	end WashingData;
+	
+	data implementation WashingData.impl
+		subcomponents
+			temp: data Base_Types::Unsigned_8;      -- 30, 40, ..., 90
+			rotations: data Base_Types::Unsigned_8; -- 3000, 4000, ..., 1200 as 3, 4, ..., 12 (in thousands)
+	end WashingData.impl;
+	
+	
+	----- DEVICES -----
+	
+	device WasherMotor
+	end WasherMotor;
+	
+	device implementation WasherMotor.impl
+	end WasherMotor.impl;
+	
+	
+	device WaterValve
+		features
+			openCloseValve: in event port;
+	end WaterValve;
+	
+	device implementation WaterValve.impl
+	end WaterValve.impl;
+	
+	
+	device WaterLevelSensor
+		features
+			waterLevel: out data port Base_Types::Unsigned_8;
+	end WaterLevelSensor;
+	
+	device implementation WaterLevelSensor.impl
+	end WaterLevelSensor.impl;
+	
+	
+	device WaterPump
+		features
+			onOffPump: in event port;
+	end WaterPump;
+	
+	device implementation WaterPump.impl
+	end WaterPump.impl;
+	
+	
+	device WaterHeater
+		features
+			onOffHeater: in event port;
+	end WaterHeater;
+	
+	device implementation WaterHeater.impl
+	end WaterHeater.impl;
+	
+	
+	device TemperatureSensor
+		features
+			tempOut: out data port Base_Types::Unsigned_16;
+	end TemperatureSensor;
+	
+	device implementation TemperatureSensor.impl
+	end TemperatureSensor.impl;
+	
+	
+	device DoorClosedSensor
+		features
+			isClosed: out data port Base_Types::Boolean;
+	end DoorClosedSensor;
+	
+	device implementation DoorClosedSensor.impl
+	end DoorClosedSensor.impl;
+	
+	
+	device DoorLock
+		features
+			openCloseLock: in event port;
+	end DoorLock;
+	
+	device implementation DoorLock.impl
+	end DoorLock.impl;
+	
+	
+	device UserScreen
+		features
+			washingDataOut: out data port WashingData; -- getting user selection
+			washingDataIn: in data port WashingData;  -- for display
+	end UserScreen;
+	
+	device implementation UserScreen.impl
+	end UserScreen.impl;
+	
+	
+	device ModeChangeKnob
+		features
+			selectedMode: out data port Base_Types::Unsigned_8;
+	end ModeChangeKnob;
+	
+	device implementation ModeChangeKnob.impl
+	end ModeChangeKnob.impl;
+	
+	
+	----- PROCESSOR -----
+	
+	processor Microcontroller
+	end Microcontroller;
+	
+	processor implementation Microcontroller.impl
+	end Microcontroller.impl;
+	
+	
+	----- MEMORY -----
+	
+	memory MainMemory
+	end MainMemory;
+	
+	memory implementation MainMemory.impl
+	end MainMemory.impl;
+	
+	
+	----- BUS -----
+	
+	bus SystemBus
+	end SystemBus;
+	
+	bus implementation SystemBus.impl
+	end SystemBus.impl;
+	
+
 end washing_machine;
