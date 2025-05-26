@@ -33,11 +33,18 @@ System odwzorowuje podstawowe cykle prania i obsługiwany jest przez użytkownik
 | processor | Microcontroller | procesor do sterowania pracą pralki |
 | memory | MainMemory | pamięć do przechowywania ostatnich ustawień programu użytkownika |
 | bus | SystemBus | magistrala systemowa do przesyłania danych i sygnałów |
+| system | WashingMachine | główny system całej pralki zawierającym wszystkie komponenty i tworzącym połączenia pomiędzy urządzeniami, a procesem |
+| process | MainController | główny proces pralki kontrolujący wszystkie jej czynności, łączy wątki z urządzeniami |
+| thread | WaterController | wątek do kontrolowania poziomu wody w pralce |
+| thread | DrumController | wątek kontrolujący obroty bębna |
+| thread | HeatController | wątek kontrolujący temperaturę wody |
+| thread | SafetyController | wątek, który dba o zamknięcie drzwi na czas prania |
+| thread | UserSettingsController | wątek, który ustawia dane na wyświetlaczu pralki, przetwarza ustawiony tryb i zwraca dane do reszty systemu |
 
 
 ## Model - rysunek
 
-...
+![Model systemu (rysunek)](img/schema.png)
 
 
 ## Proponowane metody analizy modelu. Wyniki przeprowadzonych analiz. 

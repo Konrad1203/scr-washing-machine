@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
+  <instance:SystemInstance name="WashingMachine_impl_Instance" category="system">
+    <componentInstance name="main_bus" category="bus">
+      <subcomponent xsi:type="aadl2:BusSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedBusSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:BusImplementation" href="../washing_machine.aadl#washing_machine.SystemBus.impl"/>
+    </componentInstance>
+    <componentInstance name="motor" category="device">
+      <featureInstance name="rotations" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedDeviceSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:DeviceImplementation" href="../washing_machine.aadl#washing_machine.WasherMotor.impl"/>
+    </componentInstance>
+    <componentInstance name="valve" category="device">
+      <featureInstance name="openCloseValve" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedDeviceSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:DeviceImplementation" href="../washing_machine.aadl#washing_machine.WaterValve.impl"/>
+    </componentInstance>
+    <componentInstance name="pump" category="device">
+      <featureInstance name="onOffPump" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedEventPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedDeviceSubcomponent.2"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:DeviceImplementation" href="../washing_machine.aadl#washing_machine.WaterPump.impl"/>
+    </componentInstance>
+    <componentInstance name="heater" category="device">
+      <featureInstance name="onOffHeater" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedEventPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedDeviceSubcomponent.3"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:DeviceImplementation" href="../washing_machine.aadl#washing_machine.WaterHeater.impl"/>
+    </componentInstance>
+    <componentInstance name="lock" category="device">
+      <featureInstance name="openCloseLock" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedEventPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedDeviceSubcomponent.4"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:DeviceImplementation" href="../washing_machine.aadl#washing_machine.DoorLock.impl"/>
+    </componentInstance>
+    <componentInstance name="screen" category="device">
+      <featureInstance name="washingDataOut" direction="out" type="/2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="washingDataIn" type="/2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedDeviceSubcomponent.5"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:DeviceImplementation" href="../washing_machine.aadl#washing_machine.UserScreen.impl"/>
+    </componentInstance>
+    <componentInstance name="mode_knob" category="device">
+      <featureInstance name="selectedMode" direction="out" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedDeviceSubcomponent.6"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:DeviceImplementation" href="../washing_machine.aadl#washing_machine.ModeChangeKnob.impl"/>
+    </componentInstance>
+    <componentInstance name="water_level_sens" category="device">
+      <featureInstance name="waterLevel" direction="out" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedDeviceSubcomponent.7"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:DeviceImplementation" href="../washing_machine.aadl#washing_machine.WaterLevelSensor.impl"/>
+    </componentInstance>
+    <componentInstance name="temp_sens" category="device">
+      <featureInstance name="tempOut" direction="out" type="/3">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedDeviceSubcomponent.8"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:DeviceImplementation" href="../washing_machine.aadl#washing_machine.TemperatureSensor.impl"/>
+    </componentInstance>
+    <componentInstance name="door_sens" category="device">
+      <featureInstance name="isClosed" direction="out" type="/4">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedDeviceSubcomponent.9"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:DeviceImplementation" href="../washing_machine.aadl#washing_machine.DoorClosedSensor.impl"/>
+    </componentInstance>
+    <componentInstance name="mem" category="memory">
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedMemorySubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:MemoryImplementation" href="../washing_machine.aadl#washing_machine.MainMemory.impl"/>
+    </componentInstance>
+    <componentInstance name="central_process" category="process">
+      <featureInstance name="rot_speed" direction="out" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="water_level" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="temp" type="/3">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.2"/>
+      </featureInstance>
+      <featureInstance name="door_closed" type="/4">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.3"/>
+      </featureInstance>
+      <featureInstance name="washingDataIn" type="/2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.4"/>
+      </featureInstance>
+      <featureInstance name="washingDataOut" direction="out" type="/2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.5"/>
+      </featureInstance>
+      <featureInstance name="get_mode" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.6"/>
+      </featureInstance>
+      <featureInstance name="water_valve" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedEventPort.0"/>
+      </featureInstance>
+      <featureInstance name="water_pump" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedEventPort.1"/>
+      </featureInstance>
+      <featureInstance name="heat_water" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedEventPort.2"/>
+      </featureInstance>
+      <featureInstance name="door_lock" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedEventPort.3"/>
+      </featureInstance>
+      <componentInstance name="water_ctrl" category="thread">
+        <featureInstance name="waterLevel" type="/1">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="valveCtrl" category="eventPort" direction="out">
+          <feature xsi:type="aadl2:EventPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedEventPort.0"/>
+        </featureInstance>
+        <featureInstance name="pumpCtrl" category="eventPort" direction="out">
+          <feature xsi:type="aadl2:EventPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedEventPort.1"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedThreadSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ThreadImplementation" href="../washing_machine.aadl#washing_machine.WaterController.impl"/>
+      </componentInstance>
+      <componentInstance name="drum_ctrl" category="thread">
+        <featureInstance name="rotSpeedCtrl" direction="out" type="/1">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="rotSpeedMode" type="/2">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedDataPort.1"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedThreadSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ThreadImplementation" href="../washing_machine.aadl#washing_machine.DrumController.impl"/>
+      </componentInstance>
+      <componentInstance name="heat_ctrl" category="thread">
+        <featureInstance name="tempMode" type="/2">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="currentTemp" type="/3">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedDataPort.1"/>
+        </featureInstance>
+        <featureInstance name="heatCtrl" category="eventPort" direction="out">
+          <feature xsi:type="aadl2:EventPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedEventPort.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedThreadSubcomponent.2"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ThreadImplementation" href="../washing_machine.aadl#washing_machine.HeatController.impl"/>
+      </componentInstance>
+      <componentInstance name="safety_ctrl" category="thread">
+        <featureInstance name="doorClosed" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="lockCtrl" category="eventPort" direction="out">
+          <feature xsi:type="aadl2:EventPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedEventPort.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedThreadSubcomponent.3"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ThreadImplementation" href="../washing_machine.aadl#washing_machine.SafetyController.impl"/>
+      </componentInstance>
+      <componentInstance name="user_ctrl" category="thread">
+        <featureInstance name="modeIn" type="/1">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="washingIn" type="/2">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedDataPort.1"/>
+        </featureInstance>
+        <featureInstance name="washingOut" direction="out" type="/2">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedDataPort.2"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedThreadSubcomponent.4"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ThreadImplementation" href="../washing_machine.aadl#washing_machine.UserSettingsController.impl"/>
+      </componentInstance>
+      <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedProcessSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ProcessImplementation" href="../washing_machine.aadl#washing_machine.MainController.impl"/>
+    </componentInstance>
+    <componentInstance name="cpu" category="processor">
+      <featureInstance name="sys_bus" category="busAccess" type="/5">
+        <feature xsi:type="aadl2:BusAccess" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedBusAccess.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedProcessorSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ProcessorImplementation" href="../washing_machine.aadl#washing_machine.Microcontroller.impl"/>
+    </componentInstance>
+    <connectionInstance name="screen.washingDataOut -> central_process.drum_ctrl.rotSpeedMode" complete="true" kind="portConnection" destination="/0/@componentInstance.12/@componentInstance.1/@featureInstance.1" source="/0/@componentInstance.6/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.0" destination="/0/@componentInstance.12/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.9"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@featureInstance.4" destination="/0/@componentInstance.12/@componentInstance.1/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedPortConnection.4"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="screen.washingDataOut -> central_process.heat_ctrl.tempMode" complete="true" kind="portConnection" destination="/0/@componentInstance.12/@componentInstance.2/@featureInstance.0" source="/0/@componentInstance.6/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.0" destination="/0/@componentInstance.12/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.9"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@featureInstance.4" destination="/0/@componentInstance.12/@componentInstance.2/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedPortConnection.6"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="screen.washingDataOut -> central_process.user_ctrl.washingIn" complete="true" kind="portConnection" destination="/0/@componentInstance.12/@componentInstance.4/@featureInstance.1" source="/0/@componentInstance.6/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.0" destination="/0/@componentInstance.12/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.9"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@featureInstance.4" destination="/0/@componentInstance.12/@componentInstance.4/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedPortConnection.11"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="mode_knob.selectedMode -> central_process.user_ctrl.modeIn" complete="true" kind="portConnection" destination="/0/@componentInstance.12/@componentInstance.4/@featureInstance.0" source="/0/@componentInstance.7/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.7/@featureInstance.0" destination="/0/@componentInstance.12/@featureInstance.6">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.10"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@featureInstance.6" destination="/0/@componentInstance.12/@componentInstance.4/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedPortConnection.10"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="water_level_sens.waterLevel -> central_process.water_ctrl.waterLevel" complete="true" kind="portConnection" destination="/0/@componentInstance.12/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.8/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.12/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.5"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@featureInstance.1" destination="/0/@componentInstance.12/@componentInstance.0/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="temp_sens.tempOut -> central_process.heat_ctrl.currentTemp" complete="true" kind="portConnection" destination="/0/@componentInstance.12/@componentInstance.2/@featureInstance.1" source="/0/@componentInstance.9/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.9/@featureInstance.0" destination="/0/@componentInstance.12/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.6"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@featureInstance.2" destination="/0/@componentInstance.12/@componentInstance.2/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedPortConnection.5"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="door_sens.isClosed -> central_process.safety_ctrl.doorClosed" complete="true" kind="portConnection" destination="/0/@componentInstance.12/@componentInstance.3/@featureInstance.0" source="/0/@componentInstance.10/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.10/@featureInstance.0" destination="/0/@componentInstance.12/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.7"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@featureInstance.3" destination="/0/@componentInstance.12/@componentInstance.3/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedPortConnection.8"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="central_process.water_ctrl.valveCtrl -> valve.openCloseValve" complete="true" kind="portConnection" destination="/0/@componentInstance.2/@featureInstance.0" source="/0/@componentInstance.12/@componentInstance.0/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.12/@featureInstance.7">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedPortConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.12/@featureInstance.7" destination="/0/@componentInstance.2/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="central_process.water_ctrl.pumpCtrl -> pump.onOffPump" complete="true" kind="portConnection" destination="/0/@componentInstance.3/@featureInstance.0" source="/0/@componentInstance.12/@componentInstance.0/@featureInstance.2">
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@componentInstance.0/@featureInstance.2" destination="/0/@componentInstance.12/@featureInstance.8">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedPortConnection.2"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.12/@featureInstance.8" destination="/0/@componentInstance.3/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="central_process.drum_ctrl.rotSpeedCtrl -> motor.rotations" complete="true" kind="portConnection" destination="/0/@componentInstance.1/@featureInstance.0" source="/0/@componentInstance.12/@componentInstance.1/@featureInstance.0">
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@componentInstance.1/@featureInstance.0" destination="/0/@componentInstance.12/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedPortConnection.3"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.12/@featureInstance.0" destination="/0/@componentInstance.1/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="central_process.heat_ctrl.heatCtrl -> heater.onOffHeater" complete="true" kind="portConnection" destination="/0/@componentInstance.4/@featureInstance.0" source="/0/@componentInstance.12/@componentInstance.2/@featureInstance.2">
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@componentInstance.2/@featureInstance.2" destination="/0/@componentInstance.12/@featureInstance.9">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedPortConnection.7"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.12/@featureInstance.9" destination="/0/@componentInstance.4/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="central_process.safety_ctrl.lockCtrl -> lock.openCloseLock" complete="true" kind="portConnection" destination="/0/@componentInstance.5/@featureInstance.0" source="/0/@componentInstance.12/@componentInstance.3/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@componentInstance.3/@featureInstance.1" destination="/0/@componentInstance.12/@featureInstance.10">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedPortConnection.9"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.12/@featureInstance.10" destination="/0/@componentInstance.5/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.4"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="central_process.user_ctrl.washingOut -> screen.washingDataIn" complete="true" kind="portConnection" destination="/0/@componentInstance.6/@featureInstance.1" source="/0/@componentInstance.12/@componentInstance.4/@featureInstance.2">
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@componentInstance.4/@featureInstance.2" destination="/0/@componentInstance.12/@featureInstance.5">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedPortConnection.12"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.12/@featureInstance.5" destination="/0/@componentInstance.6/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.8"/>
+      </connectionReference>
+    </connectionInstance>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../washing_machine.aadl#washing_machine.WashingMachine.impl"/>
+    <systemOperationMode name="No Modes"/>
+    <componentImplementation xsi:type="aadl2:SystemImplementation" href="../washing_machine.aadl#washing_machine.WashingMachine.impl"/>
+  </instance:SystemInstance>
+  <instance:ComponentInstance name="Base_Types::Unsigned_8" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Unsigned_8"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="washing_machine::WashingData" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../washing_machine.aadl#washing_machine.WashingData"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="Base_Types::Unsigned_16" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Number_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.13/@ownedPropertyType/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Unsigned_16"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="Base_Types::Boolean" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Boolean"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="washing_machine::SystemBus" category="bus">
+    <classifier xsi:type="aadl2:BusType" href="../washing_machine.aadl#washing_machine.SystemBus"/>
+  </instance:ComponentInstance>
+</xmi:XMI>
