@@ -1,0 +1,273 @@
+package washing_machine
+public
+	with Types;
+	
+	
+	----- DEVICES -----
+	
+	device WasherMotor
+		features
+			rotations: in data port Types::Rotations;
+	end WasherMotor;
+	
+	device implementation WasherMotor.impl
+	end WasherMotor.impl;
+	
+	
+	device WaterValve
+		features
+			openCloseValve: in event port;
+	end WaterValve;
+	
+	device implementation WaterValve.impl
+	end WaterValve.impl;
+	
+	
+	device WaterLevelSensor
+		features
+			waterLevel: out data port Types::WaterLevel;
+	end WaterLevelSensor;
+	
+	device implementation WaterLevelSensor.impl
+	end WaterLevelSensor.impl;
+	
+	
+	device WaterPump
+		features
+			onOffPump: in event port;
+	end WaterPump;
+	
+	device implementation WaterPump.impl
+	end WaterPump.impl;
+	
+	
+	device WaterHeater
+		features
+			onOffHeater: in event port;
+	end WaterHeater;
+	
+	device implementation WaterHeater.impl
+	end WaterHeater.impl;
+	
+	
+	device TemperatureSensor
+		features
+			tempOut: out data port Types::Temperature;
+	end TemperatureSensor;
+	
+	device implementation TemperatureSensor.impl
+	end TemperatureSensor.impl;
+	
+	
+	device DoorClosedSensor
+		features
+			isClosed: out data port Types::OpenClosedType;
+	end DoorClosedSensor;
+	
+	device implementation DoorClosedSensor.impl
+	end DoorClosedSensor.impl;
+	
+	
+	device DoorLock
+		features
+			openCloseLock: in event port;
+	end DoorLock;
+	
+	device implementation DoorLock.impl
+	end DoorLock.impl;
+	
+	
+	device UserScreen
+		features
+			washingDataOut: out data port Types::WashingData; -- getting user selection
+			washingDataIn: in data port Types::WashingData;  -- for display
+	end UserScreen;
+	
+	device implementation UserScreen.impl
+	end UserScreen.impl;
+	
+	
+	device ModeChangeKnob
+		features
+			selectedMode: out data port Types::WashingMode;
+	end ModeChangeKnob;
+	
+	device implementation ModeChangeKnob.impl
+	end ModeChangeKnob.impl;
+	
+	
+	----- PROCESSOR -----
+	
+	processor Microcontroller
+	 	features
+	    	sys_bus: requires bus access SystemBus;
+	end Microcontroller;
+	
+	processor implementation Microcontroller.impl
+	end Microcontroller.impl;
+	
+	
+	----- MEMORY -----
+	
+	memory MainMemory
+	end MainMemory;
+	
+	memory implementation MainMemory.impl
+	end MainMemory.impl;
+	
+	
+	----- BUS -----
+	
+	bus SystemBus
+	end SystemBus;
+	
+	bus implementation SystemBus.impl
+	end SystemBus.impl;
+	
+	
+	----- PROCESS -----
+	
+	process MainController
+		features
+			rot_speed: out data port Types::Rotations;
+			water_valve: out event port;
+			water_pump: out event port;
+			heat_water: out event port;
+			door_lock: out event port;
+			water_level: in data port Types::WaterLevel;
+			temp: in data port Types::Temperature;
+			door_closed: in data port Types::OpenClosedType;
+			washingDataIn: in data port Types::WashingData;
+    		washingDataOut: out data port Types::WashingData;
+    		get_mode: in data port Types::WashingMode;
+	end MainController;
+	
+	process implementation MainController.impl
+		subcomponents
+			water_ctrl: thread WaterController.impl;
+			drum_ctrl: thread DrumController.impl;
+			heat_ctrl: thread HeatController.impl;
+			safety_ctrl: thread SafetyController.impl;
+			user_ctrl: thread UserSettingsController.impl;
+		connections
+			-- Water Controller
+			w1: port water_level -> water_ctrl.waterLevel;
+    		w2: port water_ctrl.valveCtrl -> water_valve;
+    		w3: port water_ctrl.pumpCtrl -> water_pump;
+    		
+		    -- Drum Controller
+		    d1: port drum_ctrl.rotSpeedCtrl -> rot_speed;
+		    d2: port washingDataIn -> drum_ctrl.rotSpeedMode;
+		    
+		    -- Heat Controller
+		    h1: port temp -> heat_ctrl.currentTemp;
+		    h2: port washingDataIn -> heat_ctrl.tempMode;
+		    h3: port heat_ctrl.heatCtrl -> heat_water;
+		
+		    -- Safety Controller
+		    s1: port door_closed -> safety_ctrl.doorClosed;
+		    s2: port safety_ctrl.lockCtrl -> door_lock;
+		
+		    -- User Settings Controller
+		    u1: port get_mode -> user_ctrl.modeIn;
+		    u2: port washingDataIn -> user_ctrl.washingIn;
+		    u3: port user_ctrl.washingOut -> washingDataOut;
+	end MainController.impl;
+	
+
+	----- THREADS -----
+	
+	thread WaterController
+		features
+			waterLevel: in data port Types::WaterLevel;
+		    valveCtrl: out event port;
+		    pumpCtrl: out event port;
+	end WaterController;
+	
+	thread implementation WaterController.impl
+	end WaterController.impl;
+	
+	
+	thread DrumController
+		features
+			rotSpeedCtrl: out data port Types::Rotations;
+			rotSpeedMode: in data port Types::WashingData;
+	end DrumController;
+	
+	thread implementation DrumController.impl
+	end DrumController.impl;
+	
+	
+	thread HeatController
+		features
+			tempMode: in data port Types::WashingData;
+			currentTemp: in data port Types::Temperature;
+		    heatCtrl: out event port;
+	end HeatController;
+	
+	thread implementation HeatController.impl
+	end HeatController.impl;
+	
+	
+	thread SafetyController
+		features
+			doorClosed: in data port Types::OpenClosedType;
+    		lockCtrl: out event port;
+	end SafetyController;
+	
+	thread implementation SafetyController.impl
+	end SafetyController.impl;
+	
+	
+	thread UserSettingsController
+		features
+			modeIn: in data port Types::WashingMode;
+		    washingIn: in data port Types::WashingData;
+		    washingOut: out data port Types::WashingData;
+	end UserSettingsController;
+	
+	thread implementation UserSettingsController.impl
+	end UserSettingsController.impl;
+	
+	
+	----- SYSTEM -----
+	
+	system WashingMachine
+	end WashingMachine;
+	
+	system implementation WashingMachine.impl
+		subcomponents
+			-- parts --
+			motor: device WasherMotor.impl;
+			valve: device WaterValve.impl;
+			pump: device WaterPump.impl;
+			heater: device WaterHeater.impl;
+			lock: device DoorLock.impl;
+			screen: device UserScreen.impl;
+			mode_knob: device ModeChangeKnob.impl;
+			-- sensors --
+			water_level_sens: device WaterLevelSensor.impl;
+			temp_sens: device TemperatureSensor.impl;
+			door_sens: device DoorClosedSensor.impl;
+			-- hardware --
+			cpu: processor Microcontroller.impl;
+			mem: memory MainMemory.impl;
+			main_bus: bus SystemBus.impl;
+			-- software --
+			central_process: process MainController.impl;
+		connections
+			m1: port central_process.rot_speed -> motor.rotations;
+			v1: port central_process.water_valve -> valve.openCloseValve;
+			p1: port central_process.water_pump -> pump.onOffPump;
+			h1: port central_process.heat_water -> heater.onOffHeater;
+			l1: port central_process.door_lock -> lock.openCloseLock;
+			ws1: port water_level_sens.waterLevel -> central_process.water_level;
+			ts1: port temp_sens.tempOut -> central_process.temp;
+			ds1: port door_sens.isClosed -> central_process.door_closed;
+			s1: port central_process.washingDataOut -> screen.washingDataIn;
+			s2: port screen.washingDataOut -> central_process.washingDataIn;
+			k1: port mode_knob.selectedMode -> central_process.get_mode;
+	end WashingMachine.impl;
+	
+	
+end washing_machine;

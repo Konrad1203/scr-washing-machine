@@ -1,0 +1,45 @@
+package types
+public
+	with Base_Types;
+	with Data_Model;
+	
+	
+	----- TYPES -----
+	
+	data WashingData
+		properties
+			Data_Model::Data_Representation => STRUCT;
+	end WashingData;
+	
+	data implementation WashingData.impl
+		subcomponents
+			temp: data Temperature;      
+			rotations: data Rotations; 
+	end WashingData.impl;
+	
+	
+	data Rotations
+		extends Base_Types::Unsigned_8  -- 3000, 4000, ..., 1200 as 3, 4, ..., 12 (in thousands)
+	end Rotations;
+	
+	
+	data Temperature
+		extends Base_Types::Unsigned_16  -- 300, 400, ..., 900 (in Celsius) as 30.0, 40.0, 90.0
+	end Temperature;
+	
+	
+	data WaterLevel
+		extends Base_Types::Unsigned_8  -- 0 - empty -> 255 - full
+	end WaterLevel;
+	
+	
+	data WashingMode
+		extends Base_Types::Unsigned_8  -- potentially 0 - 255, but let minimize to 0-11 (12 modes)
+	end WashingMode;
+	
+	
+	data OpenClosedType
+		extends Base_Types::Boolean  -- true - opened / false - closed
+	end OpenClosedType;
+	
+end types;
