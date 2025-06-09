@@ -1,0 +1,171 @@
+package washing_process_subsystem
+public
+	with Types;
+	with Hardware;
+	
+	----- SUBSYSTEM -----
+	
+	system WashingProcessSystem
+		features
+			washingFinishedOut: out event port;
+			pauseStartIn: in event port;
+			errorCodeOut: out data port Types::ErrorCode;
+			userSettingsIn: in data port Types::WashingData;
+	end WashingProcessSystem;
+	
+	system implementation WashingProcessSystem.impl
+		subcomponents
+			-- parts --
+			motor: device Hardware::WasherMotor.impl;
+			valve: device Hardware::WaterValve.impl;
+			pump: device Hardware::WaterPump.impl;
+			heater: device Hardware::WaterHeater.impl;
+			lock: device Hardware::DoorLock.impl;
+			-- sensors --
+			water_level_sens: device Hardware::WaterLevelSensor.impl;
+			temp_sens: device Hardware::TemperatureSensor.impl;
+			door_sens: device Hardware::DoorClosedSensor.impl;
+			-- hardware --
+			cpu: processor Hardware::Microcontroller.impl;
+			mem: memory Hardware::PreprogrammedMemory.impl;
+			main_bus: bus Hardware::SystemBus.impl;
+			-- software --
+			central_process: process MainController.impl;
+		connections
+			c1: port pauseStartIn -> central_process.pauseStartIn;
+			c2: port central_process.washingFinishedOut -> washingFinishedOut;
+			c3: port central_process.errorCodeOut -> errorCodeOut;
+			c4: port userSettingsIn -> central_process.userSettingsIn;
+			m1: port central_process.rot_speed -> motor.rotations;
+			v1: port central_process.water_valve -> valve.openCloseValve;
+			p1: port central_process.water_pump -> pump.onOffPump;
+			h1: port central_process.heat_water -> heater.onOffHeater;
+			l1: port central_process.door_lock -> lock.openCloseLock;
+			ws1: port water_level_sens.waterLevel -> central_process.water_level;
+			ts1: port temp_sens.tempOut -> central_process.temp;
+			ds1: port door_sens.isClosed -> central_process.door_closed;
+			b1: port motor.broken -> central_process.motor_broken;
+			b2: port valve.broken -> central_process.valve_broken;
+			b3: port pump.broken -> central_process.pump_broken;
+			b4: port heater.broken -> central_process.heater_broken;
+			b5: port lock.broken -> central_process.door_lock_broken;
+			b6: port water_level_sens.broken -> central_process.level_sensor_broken;
+			b7: port temp_sens.broken -> central_process.temp_sensor_broken;
+			b8: port door_sens.broken -> central_process.door_closed_sensor_broken;
+	end WashingProcessSystem.impl;
+	
+	
+	----- PROCESS -----
+	
+	process MainController
+		features
+			rot_speed: out data port Types::Rotations;
+			water_valve: out event port;
+			water_pump: out event port;
+			heat_water: out event port;
+			door_lock: out event port;
+			water_level: in data port Types::WaterLevel;
+			temp: in data port Types::Temperature;
+			door_closed: in data port Types::OpenClosedType;
+    		
+    		washingFinishedOut: out event port;
+    		pauseStartIn: in event port;
+    		errorCodeOut: out data port Types::ErrorCode;
+			userSettingsIn: in data port Types::WashingData;
+			
+			motor_broken: in event port;
+			valve_broken: in event port;
+			level_sensor_broken: in event port;
+			pump_broken: in event port;
+			heater_broken: in event port;
+			temp_sensor_broken: in event port;
+			door_closed_sensor_broken: in event port;
+			door_lock_broken: in event port;
+	end MainController;
+	
+	process implementation MainController.impl
+		subcomponents
+			water_ctrl: thread WaterController.impl;
+			drum_ctrl: thread DrumController.impl;
+			heat_ctrl: thread HeatController.impl;
+			safety_ctrl: thread SafetyController.impl;
+			user_ctrl: thread UserInputController.impl;
+		connections
+			-- Water Controller
+			w1: port water_level -> water_ctrl.waterLevel;
+    		w2: port water_ctrl.valveCtrl -> water_valve;
+    		w3: port water_ctrl.pumpCtrl -> water_pump;
+    		
+		    -- Drum Controller
+		    d1: port drum_ctrl.rotSpeedCtrl -> rot_speed;
+		    d2: port user_ctrl.rotSpeedOut -> drum_ctrl.rotSpeedIn;
+		    
+		    -- Heat Controller
+		    h1: port temp -> heat_ctrl.currentTemp;
+		    h2: port user_ctrl.waterTempOut -> heat_ctrl.tempIn;
+		    h3: port heat_ctrl.heatCtrl -> heat_water;
+		
+		    -- Safety Controller
+		    s1: port door_closed -> safety_ctrl.doorClosed;
+		    s2: port safety_ctrl.lockCtrl -> door_lock;
+		    
+		    -- User Input Controller
+		    u1: port userSettingsIn -> user_ctrl.userSettingsIn;
+	end MainController.impl;
+	
+
+	----- THREADS -----
+	
+	thread WaterController
+		features
+			waterLevel: in data port Types::WaterLevel;
+		    valveCtrl: out event port;
+		    pumpCtrl: out event port;
+	end WaterController;
+	
+	thread implementation WaterController.impl
+	end WaterController.impl;
+	
+	
+	thread DrumController
+		features
+			rotSpeedCtrl: out data port Types::Rotations;
+			rotSpeedIn: in data port Types::Rotations;
+	end DrumController;
+	
+	thread implementation DrumController.impl
+	end DrumController.impl;
+	
+	
+	thread HeatController
+		features
+			tempIn: in data port Types::Temperature;
+			currentTemp: in data port Types::Temperature;
+		    heatCtrl: out event port;
+	end HeatController;
+	
+	thread implementation HeatController.impl
+	end HeatController.impl;
+	
+	
+	thread SafetyController
+		features
+			doorClosed: in data port Types::OpenClosedType;
+    		lockCtrl: out event port;
+	end SafetyController;
+	
+	thread implementation SafetyController.impl
+	end SafetyController.impl;
+	
+	
+	thread UserInputController
+		features
+			userSettingsIn: in data port Types::WashingData;
+			rotSpeedOut: out data port Types::Rotations;
+			waterTempOut: out data port Types::Temperature;
+	end UserInputController;
+	
+	thread implementation UserInputController.impl
+	end UserInputController.impl;
+	
+end washing_process_subsystem;

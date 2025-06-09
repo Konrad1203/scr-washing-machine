@@ -1,0 +1,150 @@
+package hardware
+public
+	with Types;
+	
+	----- DEVICES -----
+	
+	device WasherMotor
+		features
+			rotations: in data port Types::Rotations;
+			broken: out event port;
+	end WasherMotor;
+	
+	device implementation WasherMotor.impl
+	end WasherMotor.impl;
+	
+	
+	device WaterValve
+		features
+			openCloseValve: in event port;
+			broken: out event port;
+	end WaterValve;
+	
+	device implementation WaterValve.impl
+	end WaterValve.impl;
+	
+	
+	device WaterLevelSensor
+		features
+			waterLevel: out data port Types::WaterLevel;
+			broken: out event port;
+	end WaterLevelSensor;
+	
+	device implementation WaterLevelSensor.impl
+	end WaterLevelSensor.impl;
+	
+	
+	device WaterPump
+		features
+			onOffPump: in event port;
+			broken: out event port;
+	end WaterPump;
+	
+	device implementation WaterPump.impl
+	end WaterPump.impl;
+	
+	
+	device WaterHeater
+		features
+			onOffHeater: in event port;
+			broken: out event port;
+	end WaterHeater;
+	
+	device implementation WaterHeater.impl
+	end WaterHeater.impl;
+	
+	
+	device TemperatureSensor
+		features
+			tempOut: out data port Types::Temperature;
+			broken: out event port;
+	end TemperatureSensor;
+	
+	device implementation TemperatureSensor.impl
+	end TemperatureSensor.impl;
+	
+	
+	device DoorClosedSensor
+		features
+			isClosed: out data port Types::OpenClosedType;
+			broken: out event port;
+	end DoorClosedSensor;
+	
+	device implementation DoorClosedSensor.impl
+	end DoorClosedSensor.impl;
+	
+	
+	device DoorLock
+		features
+			openCloseLock: in event port;
+			broken: out event port;
+	end DoorLock;
+	
+	device implementation DoorLock.impl
+	end DoorLock.impl;
+	
+	
+	device UserPannel -- (screen with mode knob)
+		features
+			washingDataOut: out data port Types::WashingData; -- getting user selection
+			washingDataIn: in data port Types::WashingData;  -- for display (from memory)
+			pauseStartOut: out event port; -- for sending signal if user want to pause or restart washing
+			errorCodeIn: in data port Types::ErrorCode;
+	end UserPannel;
+	
+	device implementation UserPannel.impl
+	end UserPannel.impl;
+	
+	
+	----- PROCESSOR -----
+	
+	processor Microcontroller
+	 	features
+	    	sys_bus: requires bus access SystemBus;
+	end Microcontroller;
+	
+	processor implementation Microcontroller.impl
+	end Microcontroller.impl;
+	
+	
+	processor ScreenMicrocontroller
+		features
+			mem_bus: requires bus access MemoryBus;
+	end ScreenMicrocontroller;
+	
+	processor implementation ScreenMicrocontroller.impl
+	end ScreenMicrocontroller.impl;
+	
+	
+	----- MEMORY -----
+	
+	memory PreprogrammedMemory
+	end PreprogrammedMemory;
+	
+	memory implementation PreprogrammedMemory.impl
+	end PreprogrammedMemory.impl;
+	
+	
+	memory UserSettingsMemory
+	end UserSettingsMemory;
+	
+	memory implementation UserSettingsMemory.impl
+	end UserSettingsMemory.impl;
+	
+	
+	----- BUS -----
+	
+	bus SystemBus
+	end SystemBus;
+	
+	bus implementation SystemBus.impl
+	end SystemBus.impl;
+	
+	
+	bus MemoryBus
+	end MemoryBus;
+	
+	bus implementation MemoryBus.impl
+	end MemoryBus.impl;
+	
+end hardware;

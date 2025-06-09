@@ -1,652 +1,1128 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
-  <element uuid="e64763aa-5602-4c1e-97fc-20a4d4c72f7d" manual="true">
-    <element uuid="5dd72968-7469-4ff8-940e-967737c6d342" manual="true">
-      <element uuid="fa79dd27-6b7d-48dc-a480-a80fc68a2b77" manual="true">
-        <element uuid="4302f3fb-d4df-4d0e-a607-bf6851990d5d" manual="true" dockArea="right">
+  <element uuid="f349f56d-3fbb-4a70-be0f-b6b251ee64ab" manual="true">
+    <element uuid="ddcf1dfe-5896-448c-ad16-d9f749a3ba71" manual="true">
+      <element uuid="a6921f47-98f3-45a4-9d95-c363b7c31473" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>mem</seg>
+        </bo>
+        <position x="440.0" y="320.0"/>
+        <size width="130.0" height="36.0"/>
+      </element>
+      <element uuid="9e6ac5bc-0e38-42fe-945b-37e98ac586f9" manual="true">
+        <element uuid="17257b6d-29fd-4d41-b933-2e7268ade5b4" manual="true" dockArea="left">
           <bo>
             <seg>org.osate.ge.diagrams.instance</seg>
             <seg>feature_instance</seg>
-            <seg>rotSpeedCtrl</seg>
+            <seg>errorCodeIn</seg>
           </bo>
-          <position x="210.77083206176758"/>
+          <position y="10.0"/>
         </element>
-        <element uuid="bab6fe30-f34d-449d-a3ff-06c83f91932a" manual="true" dockArea="left">
+        <element uuid="3214b5db-342b-493a-9859-00acdeb36c16" manual="true" dockArea="left">
           <bo>
             <seg>org.osate.ge.diagrams.instance</seg>
             <seg>feature_instance</seg>
-            <seg>rotSpeedMode</seg>
+            <seg>pauseStartOut</seg>
           </bo>
-          <position/>
+          <position y="55.0"/>
+        </element>
+        <element uuid="9751e168-327d-42f7-87c8-790d10523a98" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>washingDataIn</seg>
+          </bo>
+          <position y="160.00000000000006"/>
+        </element>
+        <element uuid="966550e7-3d8b-41a7-8a25-7424e50cb135" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>washingDataOut</seg>
+          </bo>
+          <position y="110.00000000000006"/>
         </element>
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>component_instance</seg>
-          <seg>drum_ctrl</seg>
+          <seg>pannel</seg>
         </bo>
-        <position x="160.0" y="180.0"/>
-        <size width="297.62108993530273" height="60.0"/>
+        <position x="279.9999999999998" y="50.0"/>
+        <size width="240.0" height="220.0"/>
       </element>
-      <element uuid="319c6373-dae7-443d-ab79-a96b2e59a7e7" manual="true">
-        <element uuid="08ef3c09-b60d-43b3-9f71-07be7965b8f9" manual="true" dockArea="left">
+      <element uuid="306434e2-5a42-4df2-8afc-3f662baa12a5" manual="true">
+        <element uuid="4b386571-2267-4a3b-9747-2a10b24ee992" manual="true" dockArea="left">
           <bo>
             <seg>org.osate.ge.diagrams.instance</seg>
             <seg>feature_instance</seg>
-            <seg>currentTemp</seg>
-          </bo>
-          <position y="55.0"/>
-        </element>
-        <element uuid="87163a7a-0c95-41d3-b8fe-1cb38028e819" manual="true" dockArea="right">
-          <bo>
-            <seg>org.osate.ge.diagrams.instance</seg>
-            <seg>feature_instance</seg>
-            <seg>heatCtrl</seg>
-          </bo>
-          <position x="219.61196899414062" y="30.0"/>
-        </element>
-        <element uuid="2ca76c01-da6f-4e15-b666-89a796a65054" manual="true" dockArea="left">
-          <bo>
-            <seg>org.osate.ge.diagrams.instance</seg>
-            <seg>feature_instance</seg>
-            <seg>tempMode</seg>
+            <seg>mem_bus</seg>
           </bo>
           <position y="10.0"/>
         </element>
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>component_instance</seg>
-          <seg>heat_ctrl</seg>
+          <seg>screen_cpu</seg>
         </bo>
-        <position x="140.0" y="510.0"/>
-        <size width="278.29816818237305" height="115.0"/>
+        <position x="249.99999999999977" y="590.0"/>
+        <size width="262.0" height="60.0"/>
       </element>
-      <element uuid="ca679a6f-92cb-42a5-8a32-82d1948a1108" manual="true">
-        <element uuid="d7440479-ba7f-4644-b269-a1c374940f2d" manual="true" dockArea="left">
+      <element uuid="1e90ff56-094f-4704-ba3f-99a2d5e9e826" manual="true">
+        <element uuid="b94189ef-0b5e-4da9-aa36-c91a6e42fcdb" manual="true">
+          <element uuid="dd1d0b4d-a211-4b5a-a78a-70b184fa16de" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>washingFinishedIn</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
           <bo>
             <seg>org.osate.ge.diagrams.instance</seg>
-            <seg>feature_instance</seg>
-            <seg>doorClosed</seg>
+            <seg>component_instance</seg>
+            <seg>after_finished_thread</seg>
           </bo>
-          <position y="30.000000000000057"/>
+          <position x="80.0" y="170.0"/>
+          <size width="422.0" height="60.0"/>
         </element>
-        <element uuid="bc1d1c17-5f01-4a99-a663-8c847c5d19f6" manual="true" dockArea="right">
+        <element uuid="8fb08c4c-585e-40c7-aebf-a84905b4467e" manual="true">
+          <element uuid="e2dd08c4-140d-43fd-b23c-390ac252f914" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>washingDataIn</seg>
+            </bo>
+            <position y="60.0"/>
+          </element>
+          <element uuid="01b79674-6d01-4340-8320-1c6fe84653a8" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>washingDataOut</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>component_instance</seg>
+            <seg>memory_manager_thread</seg>
+          </bo>
+          <position x="100.0" y="40.0"/>
+          <size width="427.0" height="110.0"/>
+        </element>
+        <element uuid="52025224-4e67-4a80-9903-4ba61321b7d9" manual="true" dockArea="left">
           <bo>
             <seg>org.osate.ge.diagrams.instance</seg>
             <seg>feature_instance</seg>
-            <seg>lockCtrl</seg>
+            <seg>washingDataIn</seg>
           </bo>
-          <position x="216.69530868530273" y="20.000000000000057"/>
+          <position y="80.0"/>
+        </element>
+        <element uuid="644111a7-9243-4ca8-9a46-93da83558443" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>washingDataOut</seg>
+          </bo>
+          <position y="10.000000000000057"/>
+        </element>
+        <element uuid="0e2019d2-1140-4e90-8bad-2e811a751206" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>washingFinishedIn</seg>
+          </bo>
+          <position y="150.0"/>
         </element>
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>component_instance</seg>
-          <seg>safety_ctrl</seg>
+          <seg>usr_panel_process</seg>
         </bo>
-        <position x="140.0" y="260.0000000000001"/>
-        <size width="273.1419219970703" height="110.0"/>
+        <position x="150.0" y="290.0"/>
+        <size width="570.0" height="250.0"/>
       </element>
-      <element uuid="45e4d006-3550-47ab-9dbf-684a98b94492" manual="true">
-        <element uuid="dc953a60-afa0-4f28-b77d-fab2333814e7" manual="true" dockArea="left">
+      <element uuid="c6162b8c-a1a9-4a79-b3a3-2c671a359a4b" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c2 : WashingMachine_impl_Instance.userPannelSys.usr_panel_process.washingDataIn -> WashingMachine_impl_Instance.userPannelSys.usr_panel_process.memory_manager_thread.washingDataIn</seg>
+        </bo>
+      </element>
+      <element uuid="d12d5d94-26ee-45e7-bd03-a996c40d6d61" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c3 : WashingMachine_impl_Instance.userPannelSys.usr_panel_process.memory_manager_thread.washingDataOut -> WashingMachine_impl_Instance.userPannelSys.usr_panel_process.washingDataOut</seg>
+        </bo>
+      </element>
+      <element uuid="9bc0603c-3151-4d44-9e4f-5c72e16847f9" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c4 : WashingMachine_impl_Instance.userPannelSys.usr_panel_process.washingDataOut -> WashingMachine_impl_Instance.userPannelSys.pannel.washingDataIn</seg>
+        </bo>
+        <bendpoints>
+          <point x="790.0" y="540.0"/>
+          <point x="791.0" y="473.0"/>
+        </bendpoints>
+      </element>
+      <element uuid="8dc84903-adc6-4628-a4df-e0083d074718" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c5 : WashingMachine_impl_Instance.userPannelSys.pannel.washingDataOut -> WashingMachine_impl_Instance.userPannelSys.usr_panel_process.washingDataIn</seg>
+        </bo>
+        <bendpoints>
+          <point x="766.0" y="452.0"/>
+          <point x="766.0" y="604.0"/>
+        </bendpoints>
+      </element>
+      <element uuid="12b7a385-8c4b-4090-99f3-12db339c4316" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>errorCodeIn</seg>
+        </bo>
+        <position y="30.0"/>
+      </element>
+      <element uuid="6eca0866-85b1-4dd8-b3b8-8d1782cbf2f5" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>pauseStartOut</seg>
+        </bo>
+        <position y="75.0"/>
+      </element>
+      <element uuid="40ada355-840b-49ab-8e75-244e9c846a20" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>userSettingsOut</seg>
+        </bo>
+        <position y="160.00000000000006"/>
+      </element>
+      <element uuid="e2530eee-1d7e-40b0-b1b0-d0a92c462b0c" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>washingFinishedIn</seg>
+        </bo>
+        <position y="410.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>userPannelSys</seg>
+      </bo>
+      <position x="1760.0000000000002" y="190.0"/>
+      <size width="939.9999999999998" height="700.0"/>
+    </element>
+    <element uuid="50e15d9f-7c14-4539-8149-547cbaed3588" manual="true">
+      <element uuid="7085a31e-f021-4872-b780-4e515d41169e" manual="true">
+        <element uuid="a14672fd-6fce-4d1f-8547-3b6b33e1b814" manual="true">
+          <element uuid="68e7a38f-1a64-4aa9-b56f-5cf2e3b5aa47" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>rotSpeedCtrl</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <element uuid="0935932e-0a77-423e-b78f-e9750eee64ef" manual="true" dockArea="right">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>rotSpeedIn</seg>
+            </bo>
+            <position x="229.76563262939453" y="10.0"/>
+          </element>
           <bo>
             <seg>org.osate.ge.diagrams.instance</seg>
-            <seg>feature_instance</seg>
-            <seg>modeIn</seg>
+            <seg>component_instance</seg>
+            <seg>drum_ctrl</seg>
           </bo>
-          <position y="9.999999999999943"/>
+          <position x="200.0" y="50.0"/>
+          <size width="307.0" height="95.0"/>
         </element>
-        <element uuid="b303e203-1710-430e-9ab3-35d2da6e3f10" manual="true" dockArea="left">
+        <element uuid="fd19dd91-8ac7-4da3-b173-3520f3d199be" manual="true">
+          <element uuid="967f8b1f-089e-4a74-a68f-3df91d54e258" manual="true" dockArea="right">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>currentTemp</seg>
+            </bo>
+            <position x="190.4205780029297" y="20.0"/>
+          </element>
+          <element uuid="be9e276d-014d-4c70-83e2-220860259b54" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>heatCtrl</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <element uuid="a9acee0e-bfc1-420c-8c63-09d0fc7dbbde" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>tempIn</seg>
+            </bo>
+            <position y="70.0"/>
+          </element>
           <bo>
             <seg>org.osate.ge.diagrams.instance</seg>
-            <seg>feature_instance</seg>
-            <seg>washingIn</seg>
+            <seg>component_instance</seg>
+            <seg>heat_ctrl</seg>
           </bo>
-          <position y="54.99999999999994"/>
+          <position x="200.0" y="440.0"/>
+          <size width="278.0" height="130.0"/>
         </element>
-        <element uuid="e319c994-d869-49ff-8b4d-b0e5b8bd275e" manual="true" dockArea="right">
+        <element uuid="3ccfa013-7191-4750-8e7d-609727abaad2" manual="true">
+          <element uuid="721458c1-e3a1-4442-a728-28c59cd09f2a" manual="true" dockArea="right">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>doorClosed</seg>
+            </bo>
+            <position x="192.80989837646484" y="20.0"/>
+          </element>
+          <element uuid="7f8ea9dd-d0ba-45a8-886b-8a9fcf77233e" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>lockCtrl</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>component_instance</seg>
+            <seg>safety_ctrl</seg>
+          </bo>
+          <position x="210.0" y="150.0"/>
+          <size width="273.0" height="110.0"/>
+        </element>
+        <element uuid="79568115-8a33-41ba-888c-1f0f243e28e5" manual="true">
+          <element uuid="9178b6fc-cf0e-4ccc-a1ef-4d012e8a0095" manual="true" dockArea="right">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>rotSpeedOut</seg>
+            </bo>
+            <position x="215.8750038146972" y="20.0"/>
+          </element>
+          <element uuid="42867f98-a899-439c-88e9-991a5f843af4" manual="true" dockArea="right">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>userSettingsIn</seg>
+            </bo>
+            <position x="206.24610519409174" y="80.0"/>
+          </element>
+          <element uuid="bfbb0ba3-2fdd-46eb-be56-494a56568205" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>waterTempOut</seg>
+            </bo>
+            <position y="30.0"/>
+          </element>
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>component_instance</seg>
+            <seg>user_ctrl</seg>
+          </bo>
+          <position x="190.0" y="620.0"/>
+          <size width="303.4804725646972" height="130.0"/>
+        </element>
+        <element uuid="0a3e032a-97b2-4e47-a2de-1cac2136c6ce" manual="true">
+          <element uuid="0056056c-2012-4d2f-b9fd-4ba452fca5d6" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>pumpCtrl</seg>
+            </bo>
+            <position y="60.0"/>
+          </element>
+          <element uuid="a17f4558-9cd0-4cda-9d3e-b90ca308298b" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>valveCtrl</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <element uuid="076e0b1b-5ff6-4623-8cbf-00641407c218" manual="true" dockArea="right">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>waterLevel</seg>
+            </bo>
+            <position x="186.52083587646484" y="40.0"/>
+          </element>
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>component_instance</seg>
+            <seg>water_ctrl</seg>
+          </bo>
+          <position x="210.0" y="300.0"/>
+          <size width="263.0" height="110.0"/>
+        </element>
+        <element uuid="81e83e2b-7f65-4719-8a60-a3556a1a6aa2" manual="true">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>connection_reference</seg>
+            <seg>d2 : WashingMachine_impl_Instance.washingProcessSys.central_process.user_ctrl.rotSpeedOut -> WashingMachine_impl_Instance.washingProcessSys.central_process.drum_ctrl.rotSpeedIn</seg>
+          </bo>
+          <bendpoints>
+            <point x="72.0000228881836" y="819.0"/>
+            <point x="80.0000228881836" y="240.00001525878906"/>
+          </bendpoints>
+        </element>
+        <element uuid="c5fefa60-71d6-4440-8915-a650911b03f0" manual="true">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>connection_reference</seg>
+            <seg>h2 : WashingMachine_impl_Instance.washingProcessSys.central_process.user_ctrl.waterTempOut -> WashingMachine_impl_Instance.washingProcessSys.central_process.heat_ctrl.tempIn</seg>
+          </bo>
+          <bendpoints>
+            <point x="-296.9999694824219" y="827.0"/>
+            <point x="-295.9999694824219" y="691.0"/>
+          </bendpoints>
+        </element>
+        <element uuid="699ea09f-90cf-465c-81a8-0643f261d136" manual="true" dockArea="right">
           <bo>
             <seg>org.osate.ge.diagrams.instance</seg>
             <seg>feature_instance</seg>
-            <seg>washingOut</seg>
+            <seg>door_closed</seg>
           </bo>
-          <position x="185.53645706176758" y="54.99999999999994"/>
+          <position x="618.3567657470703" y="210.0"/>
+        </element>
+        <element uuid="37f00f3e-7e38-418e-906e-c84d646d22d6" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>door_closed_sensor_broken</seg>
+          </bo>
+          <position x="522.73828125" y="255.0"/>
+        </element>
+        <element uuid="6fff19c3-f40b-409f-aac1-196c277c3858" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>door_lock</seg>
+          </bo>
+          <position y="160.0"/>
+        </element>
+        <element uuid="a916f8f8-cfae-4ed4-9872-72dcbec748b3" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>door_lock_broken</seg>
+          </bo>
+          <position y="220.0"/>
+        </element>
+        <element uuid="0eb7322e-f7d6-4691-affd-047c40e1cfe9" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>errorCodeOut</seg>
+          </bo>
+          <position x="609.4830780029297" y="10.0"/>
+        </element>
+        <element uuid="0026a60f-4d08-4f4a-802e-ad55a1656a26" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>heat_water</seg>
+          </bo>
+          <position y="550.0"/>
+        </element>
+        <element uuid="9ac35be0-3e60-4489-8440-b136beb6212f" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>heater_broken</seg>
+          </bo>
+          <position y="620.0"/>
+        </element>
+        <element uuid="78acf145-cc82-4ee5-b14b-600cdd20565f" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>level_sensor_broken</seg>
+          </bo>
+          <position x="567.9596328735352" y="420.0"/>
+        </element>
+        <element uuid="74bf30a1-abaf-4ca7-8322-4008fe68b67f" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>motor_broken</seg>
+          </bo>
+          <position y="90.0"/>
+        </element>
+        <element uuid="d50cb923-80eb-43fe-9392-15e3e177d0b7" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>pauseStartIn</seg>
+          </bo>
+          <position x="615.39453125" y="60.0"/>
+        </element>
+        <element uuid="10de5983-311f-4a2d-b6b1-200e00b3d725" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>pump_broken</seg>
+          </bo>
+          <position y="480.0"/>
+        </element>
+        <element uuid="0dd2a85e-ec5c-46f6-b8cb-6a704b3681ff" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>rot_speed</seg>
+          </bo>
+          <position y="40.0"/>
+        </element>
+        <element uuid="b4808d4d-6f7c-4c3e-b326-814cba9b493f" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>temp</seg>
+          </bo>
+          <position x="661.3580741882324" y="560.0"/>
+        </element>
+        <element uuid="803c61af-4150-4c28-aa86-81574baf0c53" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>temp_sensor_broken</seg>
+          </bo>
+          <position x="565.7395782470703" y="610.0"/>
+        </element>
+        <element uuid="9f36e65b-c094-488f-860e-a32e75a78fe2" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>userSettingsIn</seg>
+          </bo>
+          <position x="605.7656326293945" y="710.0"/>
+        </element>
+        <element uuid="aaf8a1f9-6218-4994-ac44-ece9f29d71da" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>valve_broken</seg>
+          </bo>
+          <position y="355.0"/>
+        </element>
+        <element uuid="d727c260-7bce-4062-9daf-b01e4a1a59b5" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>washingFinishedOut</seg>
+          </bo>
+          <position x="570.1927032470703" y="120.0"/>
+        </element>
+        <element uuid="131e908b-d1a2-4bb9-aa2a-c9038a94de7e" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>water_level</seg>
+          </bo>
+          <position x="623.55859375" y="370.0"/>
+        </element>
+        <element uuid="c2b36cb2-5f97-4f22-a9d1-3ab16abae1e5" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>water_pump</seg>
+          </bo>
+          <position y="430.0"/>
+        </element>
+        <element uuid="5ee3124a-7a7b-4fe0-a98c-c31d5b09e8e9" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>water_valve</seg>
+          </bo>
+          <position y="310.0"/>
         </element>
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>component_instance</seg>
-          <seg>user_ctrl</seg>
+          <seg>central_process</seg>
         </bo>
-        <position x="180.0" y="50.0"/>
-        <size width="267.9466133117676" height="109.99999999999997"/>
+        <position x="320.0" y="70.0"/>
+        <size width="703.0" height="780.0"/>
       </element>
-      <element uuid="714c4e19-579c-40c4-9488-5c6096a816d4" manual="true">
-        <element uuid="9e2c039b-4ae8-4532-8348-82ccccd2bc12" manual="true" dockArea="right">
+      <element uuid="f5de5b41-3d33-49ea-a1f0-0b6a5356afb0" manual="true">
+        <element uuid="8b641177-12b1-42d8-bf1a-43440b58ce21" manual="true" dockArea="left">
           <bo>
             <seg>org.osate.ge.diagrams.instance</seg>
             <seg>feature_instance</seg>
-            <seg>pumpCtrl</seg>
+            <seg>sys_bus</seg>
           </bo>
-          <position x="196.66275787353516" y="65.0"/>
+          <position y="10.0"/>
         </element>
-        <element uuid="a0e6c1f9-041f-4aa8-aaa4-1935a8132864" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>cpu</seg>
+        </bo>
+        <position x="460.0" y="910.0"/>
+        <size width="195.0" height="60.0"/>
+      </element>
+      <element uuid="e13671cc-b388-46df-bcb7-d8bfb7b1c80d" manual="true">
+        <element uuid="bb9c69c9-5efa-4e74-b652-55556fbff151" manual="true" dockArea="left">
           <bo>
             <seg>org.osate.ge.diagrams.instance</seg>
             <seg>feature_instance</seg>
-            <seg>valveCtrl</seg>
+            <seg>broken</seg>
           </bo>
-          <position x="198.88932037353516" y="20.0"/>
+          <position y="55.0"/>
         </element>
-        <element uuid="b54c33a6-0a58-4044-8251-d6938ebf7b5f" manual="true" dockArea="left">
+        <element uuid="c6c99666-8ddf-40d0-bf98-618be883cbfd" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>isClosed</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>door_sens</seg>
+        </bo>
+        <position x="1060.0" y="270.0"/>
+        <size width="201.0" height="110.0"/>
+      </element>
+      <element uuid="49c03d60-2fe1-411d-8912-c31a84447816" manual="true">
+        <element uuid="f97d8dea-f16d-4155-a379-4f781aa3015b" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>broken</seg>
+          </bo>
+          <position x="176.23177337646484" y="55.0"/>
+        </element>
+        <element uuid="6c2c59e6-f370-426a-83f2-3baf558ffb83" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>onOffHeater</seg>
+          </bo>
+          <position x="144.3697967529297" y="10.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>heater</seg>
+        </bo>
+        <position x="30.0" y="660.0"/>
+        <size width="229.0" height="100.0"/>
+      </element>
+      <element uuid="b726b7f4-e7ec-478c-bc4d-1f0ed6791a7d" manual="true">
+        <element uuid="7e4f8e4f-1f2c-4bac-8472-32f9e6d5510e" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>broken</seg>
+          </bo>
+          <position x="161.23177337646484" y="55.0"/>
+        </element>
+        <element uuid="46f8b667-0aaa-4995-9ac6-2e30373fc18a" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>openCloseLock</seg>
+          </bo>
+          <position x="110.08594512939453" y="10.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>lock</seg>
+        </bo>
+        <position x="20.0" y="230.0"/>
+        <size width="214.0" height="110.0"/>
+      </element>
+      <element uuid="cd4c2666-3f35-4145-ab83-d17bf352b988" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>main_bus</seg>
+        </bo>
+        <position x="870.0" y="920.0000000000001"/>
+        <size width="130.0" height="36.0"/>
+      </element>
+      <element uuid="f2bdc75b-957f-4e4f-924b-649408d747c9" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>mem</seg>
+        </bo>
+        <position x="690.0" y="920.0"/>
+        <size width="130.0" height="36.0"/>
+      </element>
+      <element uuid="e200ba5f-3fe8-477a-8681-ebac4ce809a1" manual="true">
+        <element uuid="2fda3a95-04f8-4987-8784-9964f25ce67a" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>broken</seg>
+          </bo>
+          <position x="159.23177337646484" y="55.0"/>
+        </element>
+        <element uuid="90044fa6-d565-43f6-a5f9-59e06c0d1432" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>rotations</seg>
+          </bo>
+          <position x="148.86067581176758" y="10.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>motor</seg>
+        </bo>
+        <position x="20.0" y="100.0"/>
+        <size width="212.0" height="110.0"/>
+      </element>
+      <element uuid="017f0c08-df0d-4711-a0ff-558841782bc6" manual="true">
+        <element uuid="07d03c31-d65f-4b3b-8692-a6363330f02b" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>broken</seg>
+          </bo>
+          <position x="191.23177337646484" y="55.0"/>
+        </element>
+        <element uuid="40af37bd-3a85-4785-85af-e61fb86ac14f" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>onOffPump</seg>
+          </bo>
+          <position x="164.55859375" y="10.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>pump</seg>
+        </bo>
+        <position x="20.0" y="520.0"/>
+        <size width="244.0" height="110.0"/>
+      </element>
+      <element uuid="29d55f6f-83db-4ed7-8af8-e74a9b9302ec" manual="true">
+        <element uuid="7e49381e-77be-42a6-8d60-273ef1b585aa" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>broken</seg>
+          </bo>
+          <position y="55.0"/>
+        </element>
+        <element uuid="b6ffdf00-a96c-477d-8d7f-1f0ba2a60e99" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>tempOut</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>temp_sens</seg>
+        </bo>
+        <position x="1060.0" y="630.0"/>
+        <size width="203.0" height="110.0"/>
+      </element>
+      <element uuid="f6f05630-cb90-4cd0-a479-2d8c27298668" manual="true">
+        <element uuid="299dc7ce-82b3-4fd2-a71c-4947003fea61" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>broken</seg>
+          </bo>
+          <position x="198.23177337646484" y="60.0"/>
+        </element>
+        <element uuid="bc66e55b-2ed2-4501-9bb8-9573e9643e95" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>openCloseValve</seg>
+          </bo>
+          <position x="141.89713287353516" y="10.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>valve</seg>
+        </bo>
+        <position x="10.0" y="370.0"/>
+        <size width="251.0" height="120.0"/>
+      </element>
+      <element uuid="68ccd5c1-2d9f-418f-938a-fe8614ad19d9" manual="true">
+        <element uuid="a1ea0d92-1eeb-4ee7-bd93-8fe426aeb024" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>broken</seg>
+          </bo>
+          <position y="65.0"/>
+        </element>
+        <element uuid="09fb9376-18ee-4c90-ae20-73128112455f" manual="true" dockArea="left">
           <bo>
             <seg>org.osate.ge.diagrams.instance</seg>
             <seg>feature_instance</seg>
             <seg>waterLevel</seg>
           </bo>
-          <position y="29.999999999999943"/>
+          <position y="20.0"/>
         </element>
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>component_instance</seg>
-          <seg>water_ctrl</seg>
+          <seg>water_level_sens</seg>
         </bo>
-        <position x="150.0" y="390.0"/>
-        <size width="262.7512969970703" height="105.0"/>
+        <position x="1060.0" y="420.0"/>
+        <size width="200.0" height="130.0"/>
       </element>
-      <element uuid="2a0ccaa2-3f82-4f70-a778-6afcf1a8b680" manual="true" dockArea="left">
+      <element uuid="95c68b45-b129-442e-bf44-7edab2afbc3a" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>b1 : WashingMachine_impl_Instance.washingProcessSys.motor.broken -> WashingMachine_impl_Instance.washingProcessSys.central_process.motor_broken</seg>
+        </bo>
+      </element>
+      <element uuid="3cc65da6-3223-4db4-9542-d4442dddc1ec" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>b2 : WashingMachine_impl_Instance.washingProcessSys.valve.broken -> WashingMachine_impl_Instance.washingProcessSys.central_process.valve_broken</seg>
+        </bo>
+      </element>
+      <element uuid="2bd6c470-84cc-4628-ace7-8ae326e8ef25" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>b3 : WashingMachine_impl_Instance.washingProcessSys.pump.broken -> WashingMachine_impl_Instance.washingProcessSys.central_process.pump_broken</seg>
+        </bo>
+      </element>
+      <element uuid="28026440-25d5-46c7-ab72-a9df2cbf53eb" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>b4 : WashingMachine_impl_Instance.washingProcessSys.heater.broken -> WashingMachine_impl_Instance.washingProcessSys.central_process.heater_broken</seg>
+        </bo>
+      </element>
+      <element uuid="10c9f290-d41b-4cf3-a82f-8952f4e9e669" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>b5 : WashingMachine_impl_Instance.washingProcessSys.lock.broken -> WashingMachine_impl_Instance.washingProcessSys.central_process.door_lock_broken</seg>
+        </bo>
+      </element>
+      <element uuid="6ce9be7b-44be-410e-b6d5-e1fc223aa1f7" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>b6 : WashingMachine_impl_Instance.washingProcessSys.water_level_sens.broken -> WashingMachine_impl_Instance.washingProcessSys.central_process.level_sensor_broken</seg>
+        </bo>
+      </element>
+      <element uuid="628e3f9f-e01f-4d0c-8f53-eeafa99c36cc" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>b7 : WashingMachine_impl_Instance.washingProcessSys.temp_sens.broken -> WashingMachine_impl_Instance.washingProcessSys.central_process.temp_sensor_broken</seg>
+        </bo>
+      </element>
+      <element uuid="78c30806-1a29-4825-a3a6-d4e1649894f1" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>b8 : WashingMachine_impl_Instance.washingProcessSys.door_sens.broken -> WashingMachine_impl_Instance.washingProcessSys.central_process.door_closed_sensor_broken</seg>
+        </bo>
+      </element>
+      <element uuid="5b7831b8-455f-4cc5-89cd-cf112c7ea186" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>d1 : WashingMachine_impl_Instance.washingProcessSys.central_process.drum_ctrl.rotSpeedCtrl -> WashingMachine_impl_Instance.washingProcessSys.central_process.rot_speed</seg>
+        </bo>
+      </element>
+      <element uuid="ba0b3e11-85bc-4180-b718-9804b00ed6e6" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>ds1 : WashingMachine_impl_Instance.washingProcessSys.door_sens.isClosed -> WashingMachine_impl_Instance.washingProcessSys.central_process.door_closed</seg>
+        </bo>
+      </element>
+      <element uuid="fbb8bbdf-6d56-4203-9ea4-a42fcef58771" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>h1 : WashingMachine_impl_Instance.washingProcessSys.central_process.heat_water -> WashingMachine_impl_Instance.washingProcessSys.heater.onOffHeater</seg>
+        </bo>
+      </element>
+      <element uuid="8ead662c-b1f9-4a50-8f18-e2296659214d" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>h1 : WashingMachine_impl_Instance.washingProcessSys.central_process.temp -> WashingMachine_impl_Instance.washingProcessSys.central_process.heat_ctrl.currentTemp</seg>
+        </bo>
+      </element>
+      <element uuid="52693f24-dfb0-4936-b1a1-6817c8083233" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>h3 : WashingMachine_impl_Instance.washingProcessSys.central_process.heat_ctrl.heatCtrl -> WashingMachine_impl_Instance.washingProcessSys.central_process.heat_water</seg>
+        </bo>
+      </element>
+      <element uuid="e95b3e78-1ba0-42d3-bf77-f8cecb10b01f" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>l1 : WashingMachine_impl_Instance.washingProcessSys.central_process.door_lock -> WashingMachine_impl_Instance.washingProcessSys.lock.openCloseLock</seg>
+        </bo>
+      </element>
+      <element uuid="7209a02e-efc9-4b5a-8117-d91d797f937e" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>m1 : WashingMachine_impl_Instance.washingProcessSys.central_process.rot_speed -> WashingMachine_impl_Instance.washingProcessSys.motor.rotations</seg>
+        </bo>
+      </element>
+      <element uuid="54cd016a-5062-4c39-9eff-9a5df740baad" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>p1 : WashingMachine_impl_Instance.washingProcessSys.central_process.water_pump -> WashingMachine_impl_Instance.washingProcessSys.pump.onOffPump</seg>
+        </bo>
+      </element>
+      <element uuid="efe26c24-2d12-4e07-8843-276e4068a314" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>s1 : WashingMachine_impl_Instance.washingProcessSys.central_process.door_closed -> WashingMachine_impl_Instance.washingProcessSys.central_process.safety_ctrl.doorClosed</seg>
+        </bo>
+      </element>
+      <element uuid="47a77fb0-ea5c-485a-b524-f36574801309" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>s2 : WashingMachine_impl_Instance.washingProcessSys.central_process.safety_ctrl.lockCtrl -> WashingMachine_impl_Instance.washingProcessSys.central_process.door_lock</seg>
+        </bo>
+      </element>
+      <element uuid="e0f503e0-b35c-4e99-88b0-cc1dec31b032" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>ts1 : WashingMachine_impl_Instance.washingProcessSys.temp_sens.tempOut -> WashingMachine_impl_Instance.washingProcessSys.central_process.temp</seg>
+        </bo>
+      </element>
+      <element uuid="656380b6-1ec2-4e1b-932e-8c003e6d034f" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>v1 : WashingMachine_impl_Instance.washingProcessSys.central_process.water_valve -> WashingMachine_impl_Instance.washingProcessSys.valve.openCloseValve</seg>
+        </bo>
+      </element>
+      <element uuid="21116e62-3d03-4108-b9d1-0b225dbf6e93" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>w1 : WashingMachine_impl_Instance.washingProcessSys.central_process.water_level -> WashingMachine_impl_Instance.washingProcessSys.central_process.water_ctrl.waterLevel</seg>
+        </bo>
+      </element>
+      <element uuid="38cd1c9f-a838-4113-89da-26e8fb0273cf" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>w2 : WashingMachine_impl_Instance.washingProcessSys.central_process.water_ctrl.valveCtrl -> WashingMachine_impl_Instance.washingProcessSys.central_process.water_valve</seg>
+        </bo>
+      </element>
+      <element uuid="bca9c54d-3029-4130-9f25-8aca33e9787c" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>w3 : WashingMachine_impl_Instance.washingProcessSys.central_process.water_ctrl.pumpCtrl -> WashingMachine_impl_Instance.washingProcessSys.central_process.water_pump</seg>
+        </bo>
+      </element>
+      <element uuid="aa3cd1c8-47ba-4b72-b8b3-302368cb2797" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>ws1 : WashingMachine_impl_Instance.washingProcessSys.water_level_sens.waterLevel -> WashingMachine_impl_Instance.washingProcessSys.central_process.water_level</seg>
+        </bo>
+      </element>
+      <element uuid="d77701f2-a4f0-4142-9d3f-ce81086ae3da" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
-          <seg>door_closed</seg>
+          <seg>errorCodeOut</seg>
         </bo>
-        <position y="220.0"/>
+        <position x="1196.4830780029297" y="80.0"/>
       </element>
-      <element uuid="2005564b-9568-4224-bc35-5336f89e7850" manual="true" dockArea="right">
+      <element uuid="1f96184f-917c-489a-850a-1231a7e80234" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
-          <seg>door_lock</seg>
+          <seg>pauseStartIn</seg>
         </bo>
-        <position x="530.1874999999999" y="310.00000000000006"/>
+        <position x="1202.39453125" y="130.0"/>
       </element>
-      <element uuid="a0b25eed-1b16-4092-b2d6-0c8390f20cc7" manual="true" dockArea="left">
+      <element uuid="14bdf176-64e5-4677-9b0c-2f17706587b9" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
-          <seg>get_mode</seg>
+          <seg>userSettingsIn</seg>
         </bo>
-        <position y="69.99999999999997"/>
+        <position x="1192.7656326293945" y="780.0"/>
       </element>
-      <element uuid="2eb975fe-edf4-4da9-8841-d5fa19402a3c" manual="true" dockArea="right">
+      <element uuid="76c01e6d-a805-4d65-87f9-7b13a038646f" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
-          <seg>heat_water</seg>
+          <seg>washingFinishedOut</seg>
         </bo>
-        <position x="522.0299530029296" y="560.0"/>
-      </element>
-      <element uuid="740d60ab-abc3-43a7-865f-49de43a3717d" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>rot_speed</seg>
-        </bo>
-        <position x="528.696620941162" y="225.00000000000009"/>
-      </element>
-      <element uuid="69b74365-2333-445c-8712-992f03c7492e" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>temp</seg>
-        </bo>
-        <position y="530.0"/>
-      </element>
-      <element uuid="32a0e377-de5f-4112-b6a6-bfe6b346898d" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>washingDataIn</seg>
-        </bo>
-        <position y="140.0"/>
-      </element>
-      <element uuid="7470e0c9-630c-4851-95ec-3672d19434d5" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>washingDataOut</seg>
-        </bo>
-        <position x="489.42577362060536" y="130.00000000000014"/>
-      </element>
-      <element uuid="35d2f0d8-0f89-4f7a-9b9f-0cdf8143127f" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>water_level</seg>
-        </bo>
-        <position y="389.99999999999994"/>
-      </element>
-      <element uuid="802d24d3-a792-4485-9aa9-f11969d6ed0c" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>water_pump</seg>
-        </bo>
-        <position x="514.627601623535" y="470.00000000000006"/>
-      </element>
-      <element uuid="3c8587b1-3855-43bc-9895-363ede5e08a9" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>water_valve</seg>
-        </bo>
-        <position x="516.854164123535" y="400.00000000000006"/>
+        <position x="1157.1927032470703" y="190.0"/>
       </element>
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>component_instance</seg>
-        <seg>central_process</seg>
+        <seg>washingProcessSys</seg>
       </bo>
-      <position x="400.0" y="50.0"/>
-      <size width="599.9999999999999" height="650.0"/>
+      <position x="320.0" y="50.0"/>
+      <size width="1290.0" height="1160.0"/>
     </element>
-    <element uuid="3a4b6e0e-45b0-4a32-af6e-ae7eb8dc422f" manual="true">
-      <element uuid="7cd3ad40-633c-4d53-af2f-9a6fa078a2f2" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>sys_bus</seg>
-        </bo>
-        <position y="10.0"/>
-      </element>
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>cpu</seg>
-      </bo>
-      <position x="350.0" y="780.0"/>
-      <size width="195.3229103088379" height="60.0"/>
-    </element>
-    <element uuid="69f11e6e-b0a1-46e5-87a1-2e03d2842d09" manual="true">
-      <element uuid="04c0970f-4d94-4ff6-bfc2-c1ccad3f268c" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>isClosed</seg>
-        </bo>
-        <position x="177.8671875" y="10.000000000000057"/>
-      </element>
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>door_sens</seg>
-      </bo>
-      <position x="60.0" y="230.00000000000006"/>
-      <size width="241.0" height="60.0"/>
-    </element>
-    <element uuid="f50d0ed0-b96f-40f7-968e-098d260c892e" manual="true">
-      <element uuid="1e68e684-5ac1-481d-ba2a-1afdc946e1ae" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>onOffHeater</seg>
-        </bo>
-        <position y="10.0"/>
-      </element>
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>heater</seg>
-      </bo>
-      <position x="1130.0" y="630.0"/>
-      <size width="259.0" height="60.0"/>
-    </element>
-    <element uuid="3945b901-1462-43e4-aaca-d62011643f04" manual="true">
-      <element uuid="2954946e-ae7c-4715-a93e-6e4f05131b47" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>openCloseLock</seg>
-        </bo>
-        <position y="12.0"/>
-      </element>
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>lock</seg>
-      </bo>
-      <position x="1110.0" y="370.00000000000006"/>
-      <size width="284.0" height="60.00000000000071"/>
-    </element>
-    <element uuid="4f1c0040-93da-4a89-93de-a4bb6a037854" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>main_bus</seg>
-      </bo>
-      <position x="650.0" y="780.0"/>
-      <size width="110.0" height="35.0"/>
-    </element>
-    <element uuid="74b8539d-f6bc-437d-983c-3f20813fc284" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>mem</seg>
-      </bo>
-      <position x="930.0" y="780.0"/>
-      <size width="82.0" height="35.0"/>
-    </element>
-    <element uuid="a07e9fad-2dbc-47f2-9a1e-ace10eee90bc" manual="true">
-      <element uuid="bf9dceb2-42e1-4d80-9792-06db398b4127" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>selectedMode</seg>
-        </bo>
-        <position x="216.9856719970703" y="9.999999999999943"/>
-      </element>
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>mode_knob</seg>
-      </bo>
-      <position x="40.0" y="100.0"/>
-      <size width="312.0" height="60.0"/>
-    </element>
-    <element uuid="b7302ad6-925b-4f1a-9e21-63b6e8b0fb70" manual="true">
-      <element uuid="7efe23e0-c342-4589-948c-f1baffc1a827" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>rotations</seg>
-        </bo>
-        <position y="10.0"/>
-      </element>
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>motor</seg>
-      </bo>
-      <position x="1140.0" y="280.00000000000006"/>
-      <size width="212.36067962646484" height="60.0"/>
-    </element>
-    <element uuid="4b14d811-8629-400c-bd81-084aaf504629" manual="true">
-      <element uuid="4c5d6c9c-09de-4f10-9255-9db775ce8b41" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>onOffPump</seg>
-        </bo>
-        <position y="20.0"/>
-      </element>
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>pump</seg>
-      </bo>
-      <position x="1140.0" y="540.0"/>
-      <size width="244.0" height="60.0"/>
-    </element>
-    <element uuid="5ca8d801-ad2a-4f53-8430-6594f72b64cd" manual="true">
-      <element uuid="caac5ab3-5587-4170-bd68-0ba32eef57b6" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>washingDataIn</seg>
-        </bo>
-        <position y="65.0"/>
-      </element>
-      <element uuid="90cc6d92-78a1-4d0f-a34b-e28c4c29e053" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>washingDataOut</seg>
-        </bo>
-        <position y="20.0"/>
-      </element>
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>screen</seg>
-      </bo>
-      <position x="1060.0" y="110.0"/>
-      <size width="313.0" height="110.0"/>
-    </element>
-    <element uuid="f387cfaf-17c2-40ce-9823-61c407f717cf" manual="true">
-      <element uuid="ebcf0b51-ca9a-41b0-a62d-ae3bce1659f1" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>tempOut</seg>
-        </bo>
-        <position x="179.86719131469727" y="10.000000000000028"/>
-      </element>
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>temp_sens</seg>
-      </bo>
-      <position x="50.0" y="570.0"/>
-      <size width="243.0" height="60.0"/>
-    </element>
-    <element uuid="56f8a502-2b7f-4543-b5be-8fd0f096202c" manual="true">
-      <element uuid="6ccf8fed-603a-4dad-a2a8-d44e055703de" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>openCloseValve</seg>
-        </bo>
-        <position y="10.0"/>
-      </element>
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>valve</seg>
-      </bo>
-      <position x="1120.0" y="450.0"/>
-      <size width="301.0" height="60.0"/>
-    </element>
-    <element uuid="a25ee045-55b6-46b3-86a1-8db997893a50" manual="true">
-      <element uuid="cfbbce07-9edb-492c-b7a0-1f17c32eaee1" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>waterLevel</seg>
-        </bo>
-        <position x="231.52083587646484" y="10.0"/>
-      </element>
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>water_level_sens</seg>
-      </bo>
-      <position x="20.0" y="400.0"/>
-      <size width="308.0" height="60.0"/>
-    </element>
-    <element uuid="96dfd8e3-6365-4306-ade6-e96f342c00b7" manual="true">
+    <element uuid="0177183a-1969-4948-ba36-fc05bc01798f" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>d1 : WashingMachine_impl_Instance.central_process.drum_ctrl.rotSpeedCtrl -> WashingMachine_impl_Instance.central_process.rot_speed</seg>
+        <seg>c1 : WashingMachine_impl_Instance.userPannelSys.userSettingsOut -> WashingMachine_impl_Instance.washingProcessSys.userSettingsIn</seg>
       </bo>
     </element>
-    <element uuid="d7078589-adf0-4879-9442-219e4c241347" manual="true">
+    <element uuid="6d0f0cc8-60ba-4515-953b-80ca3360e5dc" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>d2 : WashingMachine_impl_Instance.central_process.washingDataIn -> WashingMachine_impl_Instance.central_process.drum_ctrl.rotSpeedMode</seg>
+        <seg>c1 : WashingMachine_impl_Instance.userPannelSys.usr_panel_process.washingFinishedIn -> WashingMachine_impl_Instance.userPannelSys.usr_panel_process.after_finished_thread.washingFinishedIn</seg>
       </bo>
     </element>
-    <element uuid="33e4d92e-58d4-487d-8372-22db715429e2" manual="true">
+    <element uuid="15fc132f-851f-4db0-8579-a98d1e64adad" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>ds1 : WashingMachine_impl_Instance.door_sens.isClosed -> WashingMachine_impl_Instance.central_process.door_closed</seg>
+        <seg>c1 : WashingMachine_impl_Instance.userPannelSys.washingFinishedIn -> WashingMachine_impl_Instance.userPannelSys.usr_panel_process.washingFinishedIn</seg>
       </bo>
     </element>
-    <element uuid="b7620e23-437c-4b15-924b-ae6db0aab097" manual="true">
+    <element uuid="8200a5e6-db12-428a-9cfc-a062770aefaa" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>h1 : WashingMachine_impl_Instance.central_process.heat_water -> WashingMachine_impl_Instance.heater.onOffHeater</seg>
+        <seg>c1 : WashingMachine_impl_Instance.washingProcessSys.pauseStartIn -> WashingMachine_impl_Instance.washingProcessSys.central_process.pauseStartIn</seg>
       </bo>
     </element>
-    <element uuid="753c421c-6314-4633-8da1-db26fd46da2f" manual="true">
+    <element uuid="cebb515a-63a8-4355-b51c-4b1e758c35bd" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>h1 : WashingMachine_impl_Instance.central_process.temp -> WashingMachine_impl_Instance.central_process.heat_ctrl.currentTemp</seg>
+        <seg>c2 : WashingMachine_impl_Instance.userPannelSys.errorCodeIn -> WashingMachine_impl_Instance.userPannelSys.pannel.errorCodeIn</seg>
       </bo>
     </element>
-    <element uuid="da6f9eba-7f8f-48b6-9065-598f3f4af052" manual="true">
+    <element uuid="4cd59334-485d-4119-af92-3cbae200741c" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>h2 : WashingMachine_impl_Instance.central_process.washingDataIn -> WashingMachine_impl_Instance.central_process.heat_ctrl.tempMode</seg>
+        <seg>c2 : WashingMachine_impl_Instance.washingProcessSys.central_process.washingFinishedOut -> WashingMachine_impl_Instance.washingProcessSys.washingFinishedOut</seg>
       </bo>
     </element>
-    <element uuid="65fdbd1f-2bf9-4427-897f-5b48e51cc5b6" manual="true">
+    <element uuid="8125093b-ec20-41ad-a2f2-ebf0cb9996ab" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>h3 : WashingMachine_impl_Instance.central_process.heat_ctrl.heatCtrl -> WashingMachine_impl_Instance.central_process.heat_water</seg>
+        <seg>c2 : WashingMachine_impl_Instance.washingProcessSys.errorCodeOut -> WashingMachine_impl_Instance.userPannelSys.errorCodeIn</seg>
       </bo>
     </element>
-    <element uuid="7cb96281-81ac-4819-a8a5-2097571517c3" manual="true">
+    <element uuid="26efd218-3543-4241-8ccd-1695faeea720" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>k1 : WashingMachine_impl_Instance.mode_knob.selectedMode -> WashingMachine_impl_Instance.central_process.get_mode</seg>
+        <seg>c3 : WashingMachine_impl_Instance.userPannelSys.pannel.washingDataOut -> WashingMachine_impl_Instance.userPannelSys.userSettingsOut</seg>
       </bo>
     </element>
-    <element uuid="914ade81-6611-41c4-a865-c13bf8cf954c" manual="true">
+    <element uuid="597a1509-f4ee-475c-a75a-a2f36b77a23e" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>l1 : WashingMachine_impl_Instance.central_process.door_lock -> WashingMachine_impl_Instance.lock.openCloseLock</seg>
+        <seg>c3 : WashingMachine_impl_Instance.washingProcessSys.central_process.errorCodeOut -> WashingMachine_impl_Instance.washingProcessSys.errorCodeOut</seg>
       </bo>
     </element>
-    <element uuid="cffac05f-b0d3-4516-98fc-a21a0dc0f324" manual="true">
+    <element uuid="939e17fe-bb0b-48a8-8f3b-3d3a1baa8e68" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>m1 : WashingMachine_impl_Instance.central_process.rot_speed -> WashingMachine_impl_Instance.motor.rotations</seg>
+        <seg>c3 : WashingMachine_impl_Instance.washingProcessSys.washingFinishedOut -> WashingMachine_impl_Instance.userPannelSys.washingFinishedIn</seg>
       </bo>
     </element>
-    <element uuid="672f8d2f-8e78-4f21-befc-7ce4ac9acfc1" manual="true">
+    <element uuid="cf5120e6-1cbb-4f63-9af3-108cbe20321f" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>p1 : WashingMachine_impl_Instance.central_process.water_pump -> WashingMachine_impl_Instance.pump.onOffPump</seg>
+        <seg>c4 : WashingMachine_impl_Instance.userPannelSys.pauseStartOut -> WashingMachine_impl_Instance.washingProcessSys.pauseStartIn</seg>
       </bo>
     </element>
-    <element uuid="f03d7744-dbb8-460e-8080-4e3a8643fd05" manual="true">
+    <element uuid="586dd2c9-860f-4c5e-a2a3-425522178493" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>s1 : WashingMachine_impl_Instance.central_process.door_closed -> WashingMachine_impl_Instance.central_process.safety_ctrl.doorClosed</seg>
+        <seg>c4 : WashingMachine_impl_Instance.washingProcessSys.userSettingsIn -> WashingMachine_impl_Instance.washingProcessSys.central_process.userSettingsIn</seg>
       </bo>
     </element>
-    <element uuid="4da96460-26b0-4e8d-8c6f-fb7d563df224" manual="true">
+    <element uuid="872f9026-8dfa-4b28-98ac-191c1e75a0d6" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>s1 : WashingMachine_impl_Instance.central_process.washingDataOut -> WashingMachine_impl_Instance.screen.washingDataIn</seg>
+        <seg>c6 : WashingMachine_impl_Instance.userPannelSys.washingFinishedIn -> WashingMachine_impl_Instance.userPannelSys.usr_panel_process.washingFinishedIn</seg>
       </bo>
     </element>
-    <element uuid="324c85ee-25e0-4475-89b6-b5ff9ee93e33" manual="true">
+    <element uuid="8aa013ef-251f-4e63-99b6-52425669697b" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>s2 : WashingMachine_impl_Instance.central_process.safety_ctrl.lockCtrl -> WashingMachine_impl_Instance.central_process.door_lock</seg>
+        <seg>c7 : WashingMachine_impl_Instance.userPannelSys.pannel.pauseStartOut -> WashingMachine_impl_Instance.userPannelSys.pauseStartOut</seg>
       </bo>
     </element>
-    <element uuid="cff34d35-d5ba-4d22-ab3f-7c786776c6cb" manual="true">
+    <element uuid="f2a113a8-8356-4133-af60-92c1e0c6f44c" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>s2 : WashingMachine_impl_Instance.screen.washingDataOut -> WashingMachine_impl_Instance.central_process.washingDataIn</seg>
-      </bo>
-      <bendpoints>
-        <point x="877.0" y="152.0"/>
-        <point x="231.0" y="151.0"/>
-        <point x="219.0" y="336.0"/>
-      </bendpoints>
-    </element>
-    <element uuid="c8e0e60a-647e-4daa-b8bc-a0ffd9b11e5b" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>ts1 : WashingMachine_impl_Instance.temp_sens.tempOut -> WashingMachine_impl_Instance.central_process.temp</seg>
-      </bo>
-    </element>
-    <element uuid="c5342392-f568-43fd-ab24-baa597cda112" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>u1 : WashingMachine_impl_Instance.central_process.get_mode -> WashingMachine_impl_Instance.central_process.user_ctrl.modeIn</seg>
-      </bo>
-    </element>
-    <element uuid="8c80b709-8784-4194-8c67-93acf7ebcabf" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>u2 : WashingMachine_impl_Instance.central_process.washingDataIn -> WashingMachine_impl_Instance.central_process.user_ctrl.washingIn</seg>
-      </bo>
-    </element>
-    <element uuid="729b9539-0f3c-48f7-959a-fb90f1be7be5" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>u3 : WashingMachine_impl_Instance.central_process.user_ctrl.washingOut -> WashingMachine_impl_Instance.central_process.washingDataOut</seg>
-      </bo>
-    </element>
-    <element uuid="5cf06564-b9c1-4328-887c-e88f9ae1145b" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>v1 : WashingMachine_impl_Instance.central_process.water_valve -> WashingMachine_impl_Instance.valve.openCloseValve</seg>
-      </bo>
-    </element>
-    <element uuid="5addfdcf-5e40-450a-9954-e382ca3c3a85" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>w1 : WashingMachine_impl_Instance.central_process.water_level -> WashingMachine_impl_Instance.central_process.water_ctrl.waterLevel</seg>
-      </bo>
-    </element>
-    <element uuid="157574eb-53ff-46a9-ba96-8e6194653257" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>w2 : WashingMachine_impl_Instance.central_process.water_ctrl.valveCtrl -> WashingMachine_impl_Instance.central_process.water_valve</seg>
-      </bo>
-    </element>
-    <element uuid="0a641db9-d22b-4208-9156-43743dec1ae0" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>w3 : WashingMachine_impl_Instance.central_process.water_ctrl.pumpCtrl -> WashingMachine_impl_Instance.central_process.water_pump</seg>
-      </bo>
-    </element>
-    <element uuid="e7690e5f-c48f-4af2-81b3-1ee7f6473ae8" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>ws1 : WashingMachine_impl_Instance.water_level_sens.waterLevel -> WashingMachine_impl_Instance.central_process.water_level</seg>
+        <seg>u1 : WashingMachine_impl_Instance.washingProcessSys.central_process.userSettingsIn -> WashingMachine_impl_Instance.washingProcessSys.central_process.user_ctrl.userSettingsIn</seg>
       </bo>
     </element>
     <bo>
       <seg>org.osate.ge.diagrams.instance</seg>
       <seg>system_instance</seg>
-      <seg>/washing_machine/instances/washing_machine_washingmachine_impl_instance.aaxl2</seg>
+      <seg>/washing_machine/models/instances/washing_machine_washingmachine_impl_instance.aaxl2</seg>
     </bo>
-    <position x="-140.0" y="120.0"/>
-    <size width="1449.9999999999998" height="870.0"/>
+    <position x="-1100.0" y="30.0"/>
+    <size width="2810.0" height="1370.0"/>
   </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>
     <context>
       <seg>org.osate.ge.diagrams.instance</seg>
       <seg>system_instance</seg>
-      <seg>/washing_machine/instances/washing_machine_washingmachine_impl_instance.aaxl2</seg>
+      <seg>/washing_machine/models/instances/washing_machine_washingmachine_impl_instance.aaxl2</seg>
     </context>
   </config>
 </diagram:Diagram>

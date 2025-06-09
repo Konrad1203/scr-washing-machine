@@ -1,0 +1,74 @@
+package user_panel_subsystem
+public
+	with Types;
+	with Hardware;
+	
+	----- SUBSYSTEM -----
+	
+	system UserPannelSystem
+		features
+			userSettingsOut: out data port Types::WashingData;
+			errorCodeIn: in data port Types::ErrorCode;
+			washingFinishedIn: in event port;
+			pauseStartOut: out event port;
+	end UserPannelSystem;
+	
+	system implementation UserPannelSystem.impl
+		subcomponents
+			pannel: device Hardware::UserPannel.impl;
+			mem: memory Hardware::UserSettingsMemory.impl;
+			screen_cpu: processor Hardware::ScreenMicrocontroller.impl;
+			usr_panel_process: process UserPannelProcess.impl;
+		connections
+			c1: port washingFinishedIn -> usr_panel_process.washingFinishedIn;
+			c2: port errorCodeIn -> pannel.errorCodeIn;
+			c3: port pannel.washingDataOut -> userSettingsOut;
+			c4: port usr_panel_process.washingDataOut -> pannel.washingDataIn;
+			c5: port pannel.washingDataOut -> usr_panel_process.washingDataIn;
+			c6: port washingFinishedIn -> usr_panel_process.washingFinishedIn;
+			c7: port pannel.pauseStartOut -> pauseStartOut;
+	end UserPannelSystem.impl;
+	
+	
+	----- PROCESS -----
+	
+	process UserPannelProcess
+		features
+			washingFinishedIn: in event port;
+			washingDataIn: in data port Types::WashingData;
+			washingDataOut: out data port Types::WashingData;
+	end UserPannelProcess;
+	
+	process implementation UserPannelProcess.impl
+		subcomponents
+			after_finished_thread: thread AfterFinishedThread.impl;
+			memory_manager_thread: thread MemoryManagerThread.impl;
+		connections
+			c1: port washingFinishedIn -> after_finished_thread.washingFinishedIn;
+			c2: port washingDataIn -> memory_manager_thread.washingDataIn;
+			c3: port memory_manager_thread.washingDataOut -> washingDataOut;
+	end UserPannelProcess.impl;
+	
+	
+	----- THREADS -----
+	
+	thread AfterFinishedThread
+		features
+			washingFinishedIn: in event port;
+	end AfterFinishedThread;
+	
+	thread implementation AfterFinishedThread.impl
+	end AfterFinishedThread.impl;
+	
+	
+	thread MemoryManagerThread
+		features	
+			washingDataIn: in data port Types::WashingData;
+			washingDataOut: out data port Types::WashingData;
+	end MemoryManagerThread;
+	
+	thread implementation MemoryManagerThread.impl
+	end MemoryManagerThread.impl;
+	
+	
+end user_panel_subsystem;

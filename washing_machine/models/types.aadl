@@ -15,7 +15,8 @@ public
 		subcomponents
 			temp: data Temperature;      
 			rotations: data Rotations;
-			washingMode: data WashingMode; 
+			washingMode: data WashingMode;
+			delayedStart: data TimeLength;
 	end WashingData.impl;
 	
 	
@@ -37,6 +38,16 @@ public
 	data WashingMode
 		extends Base_Types::Unsigned_8  -- potentially 0 - 255, but let minimize to 0-11 (12 modes)
 	end WashingMode;
+	
+	
+	data TimeLength
+		extends Base_Types::Unsigned_8 -- time in 10's of minutes 1, 2, ..., 240 -> 10, 20, ..., 2400 minutes = 40 hours
+	end TimeLength;
+	
+	
+	data ErrorCode
+		extends Base_Types::String -- for example b102, f742, k123
+	end ErrorCode;
 	
 	
 	data OpenClosedType
