@@ -14,7 +14,8 @@ public
 	data implementation WashingData.impl
 		subcomponents
 			temp: data Temperature;      
-			rotations: data Rotations; 
+			rotations: data Rotations;
+			washingMode: data WashingMode; 
 	end WashingData.impl;
 	
 	
