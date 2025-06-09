@@ -77,23 +77,14 @@ public
 	end DoorLock.impl;
 	
 	
-	device UserScreen
+	device UserPannel -- (screen with mode knob)
 		features
 			washingDataOut: out data port Types::WashingData; -- getting user selection
-			washingDataIn: in data port Types::WashingData;  -- for display
-	end UserScreen;
+			washingDataIn: in data port Types::WashingData;  -- for display (from memory)
+	end UserPannel;
 	
-	device implementation UserScreen.impl
-	end UserScreen.impl;
-	
-	
-	device ModeChangeKnob
-		features
-			selectedMode: out data port Types::WashingMode;
-	end ModeChangeKnob;
-	
-	device implementation ModeChangeKnob.impl
-	end ModeChangeKnob.impl;
+	device implementation UserPannel.impl
+	end UserPannel.impl;
 	
 	
 	----- PROCESSOR -----
@@ -243,8 +234,7 @@ public
 			pump: device WaterPump.impl;
 			heater: device WaterHeater.impl;
 			lock: device DoorLock.impl;
-			screen: device UserScreen.impl;
-			mode_knob: device ModeChangeKnob.impl;
+			pannel: device UserPannel.impl;
 			-- sensors --
 			water_level_sens: device WaterLevelSensor.impl;
 			temp_sens: device TemperatureSensor.impl;
@@ -264,9 +254,8 @@ public
 			ws1: port water_level_sens.waterLevel -> central_process.water_level;
 			ts1: port temp_sens.tempOut -> central_process.temp;
 			ds1: port door_sens.isClosed -> central_process.door_closed;
-			s1: port central_process.washingDataOut -> screen.washingDataIn;
-			s2: port screen.washingDataOut -> central_process.washingDataIn;
-			k1: port mode_knob.selectedMode -> central_process.get_mode;
+			s1: port central_process.washingDataOut -> pannel.washingDataIn;
+			s2: port pannel.washingDataOut -> central_process.washingDataIn;
 	end WashingMachine.impl;
 	
 	
