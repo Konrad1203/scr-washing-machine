@@ -1,0 +1,32 @@
+package washing_machine
+public
+	with user_panel_subsystem;
+	with washing_process_subsystem;
+	with Hardware;
+	
+	----- MAIN SYSTEM -----
+	
+	system WashingMachine
+	end WashingMachine;
+	
+	system implementation WashingMachine.impl
+		subcomponents
+			userPannelSys: system user_panel_subsystem::UserPannelSystem.impl;
+			washingProcessSys: system washing_process_subsystem::WashingProcessSystem.impl;
+			sys_bus: bus Hardware::SystemBus.impl;
+		connections
+			c1: port userPannelSys.userSettingsOut -> washingProcessSys.userSettingsIn;
+			c2: port washingProcessSys.errorCodeOut -> userPannelSys.errorCodeIn;
+			c3: port washingProcessSys.washingFinishedOut -> userPannelSys.washingFinishedIn;
+			c4: port userPannelSys.pauseStartOut -> washingProcessSys.pauseStartIn;
+			
+			c5: bus access sys_bus -> userPannelSys.busAccess;
+			c6: bus access sys_bus -> washingProcessSys.busAccess;
+		properties
+			Actual_Connection_Binding  => (reference(sys_bus)) applies to c1;
+			Actual_Connection_Binding  => (reference(sys_bus)) applies to c2;
+			Actual_Connection_Binding  => (reference(sys_bus)) applies to c3;
+			Actual_Connection_Binding  => (reference(sys_bus)) applies to c4;
+	end WashingMachine.impl;
+	
+end washing_machine;

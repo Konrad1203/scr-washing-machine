@@ -7,6 +7,7 @@ public
 	
 	system WashingProcessSystem
 		features
+			busAccess: requires bus access Hardware::SystemBus; 
 			washingFinishedOut: out event port;
 			pauseStartIn: in event port;
 			errorCodeOut: out data port Types::ErrorCode;
@@ -27,8 +28,8 @@ public
 			door_sens: device Hardware::DoorClosedSensor.impl;
 			-- hardware --
 			cpu: processor Hardware::Microcontroller.impl;
-			mem: memory Hardware::PreprogrammedMemory.impl;
-			main_bus: bus Hardware::SystemBus.impl;
+			preprogrammed_mem: memory Hardware::PreprogrammedMemory.impl;
+			device_bus: bus Hardware::DeviceBus.impl;
 			-- software --
 			central_process: process MainController.impl;
 		connections
@@ -52,6 +53,30 @@ public
 			b6: port water_level_sens.broken -> central_process.level_sensor_broken;
 			b7: port temp_sens.broken -> central_process.temp_sensor_broken;
 			b8: port door_sens.broken -> central_process.door_closed_sensor_broken;
+			
+			bus1: bus access device_bus -> cpu.busAccess;
+			bus2: bus access device_bus -> motor.busAccess;
+			bus3: bus access device_bus -> valve.busAccess;
+			bus4: bus access device_bus -> pump.busAccess;
+			bus5: bus access device_bus -> heater.busAccess;
+			bus6: bus access device_bus -> heater.busAccess;
+			bus7: bus access device_bus -> lock.busAccess;
+			bus8: bus access device_bus -> water_level_sens.busAccess;
+			bus9: bus access device_bus -> temp_sens.busAccess;
+			bus10: bus access device_bus -> door_sens.busAccess;
+			
+			c10: bus access device_bus -> preprogrammed_mem.busAccess;
+		properties
+			Actual_Connection_Binding  => (reference(device_bus)) applies to m1;
+			Actual_Connection_Binding  => (reference(device_bus)) applies to v1;
+			Actual_Connection_Binding  => (reference(device_bus)) applies to p1;
+			Actual_Connection_Binding  => (reference(device_bus)) applies to l1;
+			Actual_Connection_Binding  => (reference(device_bus)) applies to ws1;
+			Actual_Connection_Binding  => (reference(device_bus)) applies to ts1;
+			Actual_Connection_Binding  => (reference(device_bus)) applies to ds1;
+			Actual_Processor_Binding => (reference (cpu)) applies to central_process;
+			Actual_Memory_Binding => (reference (preprogrammed_mem)) applies to central_process.user_ctrl;
+			Actual_Memory_Binding => (reference (preprogrammed_mem)) applies to cpu;
 	end WashingProcessSystem.impl;
 	
 	

@@ -28,25 +28,50 @@ System odwzorowuje podstawowe cykle prania i obsługiwany jest przez użytkownik
 | device | TemperatureSensor | czujnik temperatury wody w zbiorniku |
 | device | DoorClosedSensor | czujnik zakmnięcia drzwiczek |
 | device | DoorLock | zamek do blokowania drzwi |
-| device | UserScreen | ekran sterowania pralką |
-| device | ModeChangeKnob | pokrętło do zmiany trybu pralki |
-| processor | Microcontroller | procesor do sterowania pracą pralki |
-| memory | MainMemory | pamięć do przechowywania ostatnich ustawień programu użytkownika |
-| bus | SystemBus | magistrala systemowa do przesyłania danych i sygnałów |
-| system | WashingMachine | główny system całej pralki zawierającym wszystkie komponenty i tworzącym połączenia pomiędzy urządzeniami, a procesem |
+| device | UserPannel | ekran sterowania pralką razem z pokrętłem do zmiany trybu pralki |
+| processor | Microcontroller | procesor do sterowania procesem prania w pralce |
+| processor | ScreenMicrocontroller | procesor do sterowania wyświetlaczem |
+| memory | PreprogrammedMemory | pamięć przechowująca szczegóły konkretnych trybów (czas prania, ilość wody, liczba cykli, itd.) |
+| memory | UserSettingsMemory | pamięć do przechowywania ostatnich ustawień programu użytkownika |
+| bus | DeviceBus | magistrala łącząca sieć urządzeń pralki z procesorem `Microcontroller` i pamięcią `PreprogrammedMemory` |
+| bus | ScreenBus | magistrala łącząca wyświetlacz pralki z procesorem `ScreenMicrocontroller` i pamięcią `UserSettingsMemory` |
+| bus | SystemBus | magistrala łącząca dwa systemy ze sobą, komunikacja dwóch procesorów |
+| system | WashingMachine | główny system całej pralki zawierającym podsystemy i łączącą jest magistralę |
+
+### Podsystem `WashingProcessSystem`
+| Typ komponentu | Nazwa komponentu | Opis |
+| -------------- | ---------------- | ---- |
+| system | UserPannelSystem | system odpowiedzialny za odczytywanie danych użytkownika z pamięci, zapisu do niej, obsługi wyświetlacza i kontroli pralki |
+| process | UserPannelProcess | główny proces podsystemu wyświetlacza, łączy wątki z urządzeniami |
+| thread | AfterFinishedThread | wątek powiadamiający użytkownika o końcu prania |
+| thread | MemoryManagerThread | wątek odczytujący i pobierający dane użytkownika z pamięci |
+
+### Podsystem `UserPannelSystem`
+| Typ komponentu | Nazwa komponentu | Opis |
+| -------------- | ---------------- | ---- |
+| system | WashingProcessSystem | system odpowiedzialny za pranie |
 | process | MainController | główny proces pralki kontrolujący wszystkie jej czynności, łączy wątki z urządzeniami |
 | thread | WaterController | wątek do kontrolowania poziomu wody w pralce |
 | thread | DrumController | wątek kontrolujący obroty bębna |
 | thread | HeatController | wątek kontrolujący temperaturę wody |
 | thread | SafetyController | wątek, który dba o zamknięcie drzwi na czas prania |
-| thread | UserSettingsController | wątek, który ustawia dane na wyświetlaczu pralki, przetwarza ustawiony tryb i zwraca dane do reszty systemu |
+| thread | UserInputController | wątek, który pobiera ustawiony przez użytkownika tryb, oblicza dodatkowe właściwości prania i zwraca parametry do reszty procesu |
 
 
-## Model - rysunek
-
+## Pełny model systemu
 ![Model systemu (rysunek)](img/schema.png)
+
+### Podsystem `WashingProcessSystem`
+![Podsystem WashingProcessSystem](img/subsystem1.png)
+
+### Podsystem `UserPannelSystem`
+![Podsystem UserPannelSystem](img/subsystem2.png)
 
 
 ## Proponowane metody analizy modelu. Wyniki przeprowadzonych analiz. 
 
 ...
+
+
+## Literatura
+1. https://github.com/GaloisInc/CASE-AADL-Tutorial/tree/main/aadl_book/chapter1_aadl_basics

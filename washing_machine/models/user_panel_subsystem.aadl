@@ -7,6 +7,7 @@ public
 	
 	system UserPannelSystem
 		features
+			busAccess: requires bus access Hardware::SystemBus; 
 			userSettingsOut: out data port Types::WashingData;
 			errorCodeIn: in data port Types::ErrorCode;
 			washingFinishedIn: in event port;
@@ -16,8 +17,9 @@ public
 	system implementation UserPannelSystem.impl
 		subcomponents
 			pannel: device Hardware::UserPannel.impl;
-			mem: memory Hardware::UserSettingsMemory.impl;
+			user_mem: memory Hardware::UserSettingsMemory.impl;
 			screen_cpu: processor Hardware::ScreenMicrocontroller.impl;
+			screen_bus: bus Hardware::ScreenBus.impl;
 			usr_panel_process: process UserPannelProcess.impl;
 		connections
 			c1: port washingFinishedIn -> usr_panel_process.washingFinishedIn;
@@ -27,6 +29,17 @@ public
 			c5: port pannel.washingDataOut -> usr_panel_process.washingDataIn;
 			c6: port washingFinishedIn -> usr_panel_process.washingFinishedIn;
 			c7: port pannel.pauseStartOut -> pauseStartOut;
+			
+			c8: bus access screen_bus -> screen_cpu.busAccess;
+			c9: bus access screen_bus -> pannel.busAccess;
+			
+			c10: bus access screen_bus <-> user_mem.busAccess;
+		properties
+			Actual_Connection_Binding  => (reference(screen_bus)) applies to c4;
+			Actual_Connection_Binding  => (reference(screen_bus)) applies to c5;
+			Actual_Processor_Binding => (reference (screen_cpu)) applies to usr_panel_process;
+			Actual_Memory_Binding => (reference (user_mem)) applies to usr_panel_process.memory_manager_thread;
+			Actual_Memory_Binding => (reference (user_mem)) applies to screen_cpu;
 	end UserPannelSystem.impl;
 	
 	
@@ -62,7 +75,8 @@ public
 	
 	
 	thread MemoryManagerThread
-		features	
+		features
+			--memAccess: requires memory access Hardware::UserSettingsMemory;
 			washingDataIn: in data port Types::WashingData;
 			washingDataOut: out data port Types::WashingData;
 	end MemoryManagerThread;

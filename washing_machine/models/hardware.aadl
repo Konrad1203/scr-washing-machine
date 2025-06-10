@@ -8,6 +8,7 @@ public
 		features
 			rotations: in data port Types::Rotations;
 			broken: out event port;
+			busAccess: requires bus access DeviceBus;
 	end WasherMotor;
 	
 	device implementation WasherMotor.impl
@@ -18,6 +19,7 @@ public
 		features
 			openCloseValve: in event port;
 			broken: out event port;
+			busAccess: requires bus access DeviceBus;
 	end WaterValve;
 	
 	device implementation WaterValve.impl
@@ -28,6 +30,7 @@ public
 		features
 			waterLevel: out data port Types::WaterLevel;
 			broken: out event port;
+			busAccess: requires bus access DeviceBus;
 	end WaterLevelSensor;
 	
 	device implementation WaterLevelSensor.impl
@@ -38,6 +41,7 @@ public
 		features
 			onOffPump: in event port;
 			broken: out event port;
+			busAccess: requires bus access DeviceBus;
 	end WaterPump;
 	
 	device implementation WaterPump.impl
@@ -48,6 +52,7 @@ public
 		features
 			onOffHeater: in event port;
 			broken: out event port;
+			busAccess: requires bus access DeviceBus;
 	end WaterHeater;
 	
 	device implementation WaterHeater.impl
@@ -58,6 +63,7 @@ public
 		features
 			tempOut: out data port Types::Temperature;
 			broken: out event port;
+			busAccess: requires bus access DeviceBus;
 	end TemperatureSensor;
 	
 	device implementation TemperatureSensor.impl
@@ -68,6 +74,7 @@ public
 		features
 			isClosed: out data port Types::OpenClosedType;
 			broken: out event port;
+			busAccess: requires bus access DeviceBus;
 	end DoorClosedSensor;
 	
 	device implementation DoorClosedSensor.impl
@@ -78,6 +85,7 @@ public
 		features
 			openCloseLock: in event port;
 			broken: out event port;
+			busAccess: requires bus access DeviceBus;
 	end DoorLock;
 	
 	device implementation DoorLock.impl
@@ -90,6 +98,7 @@ public
 			washingDataIn: in data port Types::WashingData;  -- for display (from memory)
 			pauseStartOut: out event port; -- for sending signal if user want to pause or restart washing
 			errorCodeIn: in data port Types::ErrorCode;
+			busAccess: requires bus access ScreenBus;
 	end UserPannel;
 	
 	device implementation UserPannel.impl
@@ -100,7 +109,7 @@ public
 	
 	processor Microcontroller
 	 	features
-	    	sys_bus: requires bus access SystemBus;
+	    	busAccess: requires bus access DeviceBus;
 	end Microcontroller;
 	
 	processor implementation Microcontroller.impl
@@ -109,7 +118,7 @@ public
 	
 	processor ScreenMicrocontroller
 		features
-			mem_bus: requires bus access MemoryBus;
+			busAccess: requires bus access ScreenBus;
 	end ScreenMicrocontroller;
 	
 	processor implementation ScreenMicrocontroller.impl
@@ -119,6 +128,8 @@ public
 	----- MEMORY -----
 	
 	memory PreprogrammedMemory
+		features
+			busAccess: requires bus access DeviceBus;
 	end PreprogrammedMemory;
 	
 	memory implementation PreprogrammedMemory.impl
@@ -126,6 +137,8 @@ public
 	
 	
 	memory UserSettingsMemory
+		features
+			busAccess: requires bus access ScreenBus;
 	end UserSettingsMemory;
 	
 	memory implementation UserSettingsMemory.impl
@@ -134,17 +147,24 @@ public
 	
 	----- BUS -----
 	
+	bus DeviceBus
+	end DeviceBus;
+	
+	bus implementation DeviceBus.impl
+	end DeviceBus.impl;
+	
+	
+	bus ScreenBus
+	end ScreenBus;
+	
+	bus implementation ScreenBus.impl
+	end ScreenBus.impl;
+	
+	
 	bus SystemBus
 	end SystemBus;
 	
 	bus implementation SystemBus.impl
 	end SystemBus.impl;
-	
-	
-	bus MemoryBus
-	end MemoryBus;
-	
-	bus implementation MemoryBus.impl
-	end MemoryBus.impl;
 	
 end hardware;
