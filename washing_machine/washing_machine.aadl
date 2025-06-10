@@ -3,6 +3,7 @@ public
 	with user_panel_subsystem;
 	with washing_process_subsystem;
 	with Hardware;
+	with SEI;
 	
 	----- MAIN SYSTEM -----
 	
@@ -27,6 +28,7 @@ public
 			Actual_Connection_Binding  => (reference(sys_bus)) applies to c2;
 			Actual_Connection_Binding  => (reference(sys_bus)) applies to c3;
 			Actual_Connection_Binding  => (reference(sys_bus)) applies to c4;
+			SEI::WeightLimit => 10.0kg;
 	end WashingMachine.impl;
 	
 end washing_machine;

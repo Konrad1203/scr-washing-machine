@@ -2,6 +2,7 @@ package user_panel_subsystem
 public
 	with Types;
 	with Hardware;
+	with SEI;
 	
 	----- SUBSYSTEM -----
 	
@@ -12,6 +13,8 @@ public
 			errorCodeIn: in data port Types::ErrorCode;
 			washingFinishedIn: in event port;
 			pauseStartOut: out event port;
+		properties
+			SEI::MIPSCapacity => 1.3 mips;
 	end UserPannelSystem;
 	
 	system implementation UserPannelSystem.impl
@@ -60,6 +63,8 @@ public
 			c1: port washingFinishedIn -> after_finished_thread.washingFinishedIn;
 			c2: port washingDataIn -> memory_manager_thread.washingDataIn;
 			c3: port memory_manager_thread.washingDataOut -> washingDataOut;
+		properties
+			SEI::MIPSBudget => 1.2 mips;
 	end UserPannelProcess.impl;
 	
 	

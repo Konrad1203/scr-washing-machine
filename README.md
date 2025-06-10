@@ -68,10 +68,34 @@ System odwzorowuje podstawowe cykle prania i obsługiwany jest przez użytkownik
 ![Podsystem UserPannelSystem](img/subsystem2.png)
 
 
-## Proponowane metody analizy modelu. Wyniki przeprowadzonych analiz. 
+## Przeprowadzone analizy oraz ich wyniki.
 
-...
+### Weight Analysis
+| Nazwa elementu | Waga |
+| -------------- | ---- |
+| WasherMotor | 5 kg |
+| WaterValve | 0.3 kg |
+| WaterLevelSensor | 0.1 kg |
+| WaterPump | 0.4 kg |
+| WaterHeater | 1.5 kg |
+| TemperatureSensor | 0.08 kg |
+| DoorClosedSensor | 0.1 kg |
+| DoorLock | 0.2 kg |
+| UserPannel | 0.5 kg |
+| Microcontroller | 0.05 kg |
+| ScreenMicrocontroller | 0.1 kg |
+| PreprogrammedMemory | 0.02 kg |
+| UserSettingsMemory | 0.03 kg |
+| -------------- | ---- |
+| Limit | 10 kg |
+| Suma | 8.380 kg |
+
+[A] Sum of weights (8,380 kg) is below weight limit of 10,000 kg (16,2 % Weight slack)
+
+
 
 
 ## Literatura
-1. https://github.com/GaloisInc/CASE-AADL-Tutorial/tree/main/aadl_book/chapter1_aadl_basics
+1. https://github.com/GaloisInc/CASE-AADL-Tutorial
+2. https://github.com/GaloisInc/CASE-AADL-Tutorial/tree/main/aadl_book/chapter1_aadl_basics
+3. Kurs z systemów czasu rzeczywistego z zajęć

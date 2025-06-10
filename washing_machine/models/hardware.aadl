@@ -1,6 +1,7 @@
 package hardware
 public
 	with Types;
+	with SEI;
 	
 	----- DEVICES -----
 	
@@ -9,6 +10,9 @@ public
 			rotations: in data port Types::Rotations;
 			broken: out event port;
 			busAccess: requires bus access DeviceBus;
+		properties
+	  		SEI::GrossWeight => 5.0kg;
+	  		Dispatch_Protocol => Aperiodic;
 	end WasherMotor;
 	
 	device implementation WasherMotor.impl
@@ -20,6 +24,9 @@ public
 			openCloseValve: in event port;
 			broken: out event port;
 			busAccess: requires bus access DeviceBus;
+		properties
+	  		SEI::GrossWeight => 0.3kg;
+	  		Dispatch_Protocol => Aperiodic;
 	end WaterValve;
 	
 	device implementation WaterValve.impl
@@ -31,6 +38,10 @@ public
 			waterLevel: out data port Types::WaterLevel;
 			broken: out event port;
 			busAccess: requires bus access DeviceBus;
+		properties
+	  		SEI::GrossWeight => 0.1kg;
+	  		Dispatch_Protocol => Periodic;
+			Period => 1000ms;	
 	end WaterLevelSensor;
 	
 	device implementation WaterLevelSensor.impl
@@ -42,6 +53,9 @@ public
 			onOffPump: in event port;
 			broken: out event port;
 			busAccess: requires bus access DeviceBus;
+		properties
+	  		SEI::GrossWeight => 0.4kg;
+	  		Dispatch_Protocol => Aperiodic;
 	end WaterPump;
 	
 	device implementation WaterPump.impl
@@ -53,6 +67,9 @@ public
 			onOffHeater: in event port;
 			broken: out event port;
 			busAccess: requires bus access DeviceBus;
+		properties
+	  		SEI::GrossWeight => 1.5kg;
+	  		Dispatch_Protocol => Aperiodic;
 	end WaterHeater;
 	
 	device implementation WaterHeater.impl
@@ -64,6 +81,10 @@ public
 			tempOut: out data port Types::Temperature;
 			broken: out event port;
 			busAccess: requires bus access DeviceBus;
+		properties
+	  		SEI::GrossWeight => 0.08kg;
+	  		Dispatch_Protocol => Periodic;
+			Period => 3000ms;	
 	end TemperatureSensor;
 	
 	device implementation TemperatureSensor.impl
@@ -75,6 +96,10 @@ public
 			isClosed: out data port Types::OpenClosedType;
 			broken: out event port;
 			busAccess: requires bus access DeviceBus;
+		properties
+	  		SEI::GrossWeight => 0.1kg;
+	  		Dispatch_Protocol => Periodic;
+			Period => 10000ms;	
 	end DoorClosedSensor;
 	
 	device implementation DoorClosedSensor.impl
@@ -86,6 +111,9 @@ public
 			openCloseLock: in event port;
 			broken: out event port;
 			busAccess: requires bus access DeviceBus;
+		properties
+	  		SEI::GrossWeight => 0.2kg;
+	  		Dispatch_Protocol => Aperiodic;
 	end DoorLock;
 	
 	device implementation DoorLock.impl
@@ -99,6 +127,9 @@ public
 			pauseStartOut: out event port; -- for sending signal if user want to pause or restart washing
 			errorCodeIn: in data port Types::ErrorCode;
 			busAccess: requires bus access ScreenBus;
+		properties
+	  		SEI::GrossWeight => 0.5kg;
+	  		Dispatch_Protocol => Aperiodic;
 	end UserPannel;
 	
 	device implementation UserPannel.impl
@@ -110,6 +141,12 @@ public
 	processor Microcontroller
 	 	features
 	    	busAccess: requires bus access DeviceBus;
+	    properties
+	  		SEI::GrossWeight => 0.05kg;
+	  		Scheduling_Protocol => (Round_Robin_Protocol);
+			Clock_Period => 1 ms;	
+		    Timing_Properties::Processor_Capacity => 1.2 MIPS;
+		    SEI::MIPSCapacity => 1.0 mips;
 	end Microcontroller;
 	
 	processor implementation Microcontroller.impl
@@ -119,6 +156,12 @@ public
 	processor ScreenMicrocontroller
 		features
 			busAccess: requires bus access ScreenBus;
+		properties
+	  		SEI::GrossWeight => 0.1kg;
+	  		Scheduling_Protocol => (Round_Robin_Protocol);
+			Clock_Period => 1 ms;	
+		    Timing_Properties::Processor_Capacity => 1.5 MIPS;
+		    SEI::MIPSCapacity => 1.4 mips;
 	end ScreenMicrocontroller;
 	
 	processor implementation ScreenMicrocontroller.impl
@@ -130,6 +173,8 @@ public
 	memory PreprogrammedMemory
 		features
 			busAccess: requires bus access DeviceBus;
+		properties
+	  		SEI::GrossWeight => 0.02kg;
 	end PreprogrammedMemory;
 	
 	memory implementation PreprogrammedMemory.impl
@@ -139,6 +184,8 @@ public
 	memory UserSettingsMemory
 		features
 			busAccess: requires bus access ScreenBus;
+		properties
+	  		SEI::GrossWeight => 0.03kg;
 	end UserSettingsMemory;
 	
 	memory implementation UserSettingsMemory.impl

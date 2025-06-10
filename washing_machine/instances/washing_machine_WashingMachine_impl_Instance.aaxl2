@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
   <instance:SystemInstance name="WashingMachine_impl_Instance" category="system">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.WeightLimit"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="10.0">
+          <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.4"/>
+    </ownedPropertyAssociation>
     <componentInstance name="sys_bus" category="bus">
       <subcomponent xsi:type="aadl2:BusSubcomponent" href="../washing_machine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
       <index>0</index>
@@ -46,6 +55,15 @@
         <classifier xsi:type="aadl2:BusImplementation" href="../models/hardware.aadl#hardware.ScreenBus.impl"/>
       </componentInstance>
       <componentInstance name="pannel" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.5">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <featureInstance name="washingDataOut" direction="out" type="/1">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -93,6 +111,15 @@
         <classifier xsi:type="aadl2:DeviceImplementation" href="../models/hardware.aadl#hardware.UserPannel.impl"/>
       </componentInstance>
       <componentInstance name="user_mem" category="memory">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.03">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <featureInstance name="busAccess" category="busAccess" type="/3">
           <feature xsi:type="aadl2:BusAccess" href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedBusAccess.0"/>
         </featureInstance>
@@ -233,6 +260,15 @@
           </ownedValue>
           <propertyAssociation href="../models/user_panel_subsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.4"/>
         </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <featureInstance name="busAccess" category="busAccess" type="/3">
           <feature xsi:type="aadl2:BusAccess" href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedBusAccess.0"/>
         </featureInstance>
@@ -338,6 +374,15 @@
         <classifier xsi:type="aadl2:BusImplementation" href="../models/hardware.aadl#hardware.DeviceBus.impl"/>
       </componentInstance>
       <componentInstance name="motor" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <featureInstance name="rotations" type="/5">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -379,6 +424,15 @@
         <classifier xsi:type="aadl2:DeviceImplementation" href="../models/hardware.aadl#hardware.WasherMotor.impl"/>
       </componentInstance>
       <componentInstance name="valve" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.3">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <featureInstance name="openCloseValve" category="eventPort">
           <feature xsi:type="aadl2:EventPort" href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.0"/>
         </featureInstance>
@@ -393,6 +447,15 @@
         <classifier xsi:type="aadl2:DeviceImplementation" href="../models/hardware.aadl#hardware.WaterValve.impl"/>
       </componentInstance>
       <componentInstance name="pump" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.4">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <featureInstance name="onOffPump" category="eventPort">
           <feature xsi:type="aadl2:EventPort" href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedEventPort.0"/>
         </featureInstance>
@@ -407,6 +470,15 @@
         <classifier xsi:type="aadl2:DeviceImplementation" href="../models/hardware.aadl#hardware.WaterPump.impl"/>
       </componentInstance>
       <componentInstance name="heater" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="1.5">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <featureInstance name="onOffHeater" category="eventPort">
           <feature xsi:type="aadl2:EventPort" href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedEventPort.0"/>
         </featureInstance>
@@ -421,6 +493,15 @@
         <classifier xsi:type="aadl2:DeviceImplementation" href="../models/hardware.aadl#hardware.WaterHeater.impl"/>
       </componentInstance>
       <componentInstance name="lock" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.2">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <featureInstance name="openCloseLock" category="eventPort">
           <feature xsi:type="aadl2:EventPort" href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedEventPort.0"/>
         </featureInstance>
@@ -435,6 +516,15 @@
         <classifier xsi:type="aadl2:DeviceImplementation" href="../models/hardware.aadl#hardware.DoorLock.impl"/>
       </componentInstance>
       <componentInstance name="water_level_sens" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <featureInstance name="waterLevel" direction="out" type="/7">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -476,6 +566,15 @@
         <classifier xsi:type="aadl2:DeviceImplementation" href="../models/hardware.aadl#hardware.WaterLevelSensor.impl"/>
       </componentInstance>
       <componentInstance name="temp_sens" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.08">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <featureInstance name="tempOut" direction="out" type="/8">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -517,6 +616,15 @@
         <classifier xsi:type="aadl2:DeviceImplementation" href="../models/hardware.aadl#hardware.TemperatureSensor.impl"/>
       </componentInstance>
       <componentInstance name="door_sens" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <featureInstance name="isClosed" direction="out" type="/9">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -540,6 +648,15 @@
         <classifier xsi:type="aadl2:DeviceImplementation" href="../models/hardware.aadl#hardware.DoorClosedSensor.impl"/>
       </componentInstance>
       <componentInstance name="preprogrammed_mem" category="memory">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.02">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <featureInstance name="busAccess" category="busAccess" type="/6">
           <feature xsi:type="aadl2:BusAccess" href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedBusAccess.0"/>
         </featureInstance>
@@ -1100,6 +1217,15 @@
             </ownedValue>
           </ownedValue>
           <propertyAssociation href="../models/washing_process_subsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.9"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.05">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
         <featureInstance name="busAccess" category="busAccess" type="/6">
           <feature xsi:type="aadl2:BusAccess" href="../models/hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedBusAccess.0"/>

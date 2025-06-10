@@ -2,6 +2,7 @@ package washing_process_subsystem
 public
 	with Types;
 	with Hardware;
+	with SEI;
 	
 	----- SUBSYSTEM -----
 	
@@ -12,6 +13,8 @@ public
 			pauseStartIn: in event port;
 			errorCodeOut: out data port Types::ErrorCode;
 			userSettingsIn: in data port Types::WashingData;
+		properties
+			SEI::MIPSCapacity => 0.9 mips;
 	end WashingProcessSystem;
 	
 	system implementation WashingProcessSystem.impl
@@ -136,6 +139,8 @@ public
 		    
 		    -- User Input Controller
 		    u1: port userSettingsIn -> user_ctrl.userSettingsIn;
+		properties
+			SEI::MIPSBudget => 0.8 mips;
 	end MainController.impl;
 	
 
