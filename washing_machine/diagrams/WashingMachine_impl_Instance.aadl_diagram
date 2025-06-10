@@ -7,7 +7,7 @@
         <seg>component_instance</seg>
         <seg>sys_bus</seg>
       </bo>
-      <position x="1390.0000000000002" y="60.0"/>
+      <position x="1390.0" y="60.0"/>
       <size width="130.0" height="36.0"/>
     </element>
     <element uuid="ddcf1dfe-5896-448c-ad16-d9f749a3ba71" manual="true">
@@ -42,7 +42,7 @@
             <seg>feature_instance</seg>
             <seg>washingDataIn</seg>
           </bo>
-          <position y="160.0"/>
+          <position y="200.0"/>
         </element>
         <element uuid="966550e7-3d8b-41a7-8a25-7424e50cb135" manual="true" dockArea="left">
           <bo>
@@ -51,6 +51,14 @@
             <seg>washingDataOut</seg>
           </bo>
           <position y="110.0"/>
+        </element>
+        <element uuid="bbb69ba1-dbe3-41c0-af81-a17a57253075" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>washingDataOut2</seg>
+          </bo>
+          <position y="155.0"/>
         </element>
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
@@ -283,12 +291,12 @@
           <seg>c4 : WashingMachine_impl_Instance.userPannelSys.usr_panel_process.washingDataOut -> WashingMachine_impl_Instance.userPannelSys.pannel.washingDataIn</seg>
         </bo>
         <bendpoints>
-          <point x="2434.0" y="-240.9999542236328"/>
-          <point x="2443.0" y="-295.0000305175781"/>
+          <point x="2434.0" y="-241.0"/>
+          <point x="2443.0" y="-295.0"/>
         </bendpoints>
       </element>
-      <element uuid="c7d1dc20-4631-40ca-8560-81989b8fdf46" manual="true">
-        <element uuid="b90c2ef3-661e-4daf-aefe-db74fe914b39" manual="true">
+      <element uuid="2d66683e-eac7-4f4d-b891-14bd86fd982d" manual="true">
+        <element uuid="c1ff790a-0249-4618-b2e0-a10131ea0126" manual="true">
           <bo>
             <seg>pvg</seg>
             <seg>Deployment_Properties::Actual_Connection_Binding</seg>
@@ -298,11 +306,11 @@
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>connection_reference</seg>
-          <seg>c5 : WashingMachine_impl_Instance.userPannelSys.pannel.washingDataOut -> WashingMachine_impl_Instance.userPannelSys.usr_panel_process.washingDataIn</seg>
+          <seg>c5 : WashingMachine_impl_Instance.userPannelSys.pannel.washingDataOut2 -> WashingMachine_impl_Instance.userPannelSys.usr_panel_process.washingDataIn</seg>
         </bo>
         <bendpoints>
-          <point x="2409.0" y="-332.9999084472656"/>
-          <point x="2410.00048828125" y="-174.0"/>
+          <point x="2386.0" y="-317.0"/>
+          <point x="2393.0" y="-178.99998474121094"/>
         </bendpoints>
       </element>
       <element uuid="be8cede5-3985-45dc-b78a-41295a61941e" manual="true">
@@ -319,8 +327,8 @@
           <seg>c9 : WashingMachine_impl_Instance.userPannelSys.screen_bus -> WashingMachine_impl_Instance.userPannelSys.pannel.busAccess</seg>
         </bo>
         <bendpoints>
-          <point x="2645.00048828125" y="92.00009155273438"/>
-          <point x="3050.0" y="99.99990844726562"/>
+          <point x="2645.0" y="92.0"/>
+          <point x="3050.0" y="100.0"/>
           <point x="3039.0" y="-304.0"/>
         </bendpoints>
       </element>
@@ -369,7 +377,7 @@
         <seg>component_instance</seg>
         <seg>userPannelSys</seg>
       </bo>
-      <position x="1500.0000000000002" y="190.0"/>
+      <position x="1500.0" y="190.0"/>
       <size width="764.0" height="750.0"/>
     </element>
     <element uuid="50e15d9f-7c14-4539-8149-547cbaed3588" manual="true">
@@ -593,8 +601,8 @@
             <seg>d2 : WashingMachine_impl_Instance.washingProcessSys.central_process.user_ctrl.rotSpeedOut -> WashingMachine_impl_Instance.washingProcessSys.central_process.drum_ctrl.rotSpeedIn</seg>
           </bo>
           <bendpoints>
-            <point x="1701.0003662109375" y="41.99993896484375"/>
-            <point x="1710.0001220703125" y="-540.0001220703125"/>
+            <point x="1701.0" y="42.0"/>
+            <point x="1710.0" y="-540.0"/>
           </bendpoints>
         </element>
         <element uuid="57de4070-138b-4777-92a2-f15317a398c3" manual="true">
@@ -604,8 +612,8 @@
             <seg>h2 : WashingMachine_impl_Instance.washingProcessSys.central_process.user_ctrl.waterTempOut -> WashingMachine_impl_Instance.washingProcessSys.central_process.heat_ctrl.tempIn</seg>
           </bo>
           <bendpoints>
-            <point x="1350.0001220703125" y="52.000083923339844"/>
-            <point x="1355.0001220703125" y="-88.99983978271484"/>
+            <point x="1350.0" y="52.00001525878906"/>
+            <point x="1355.0" y="-88.99998474121094"/>
           </bendpoints>
         </element>
         <element uuid="699ea09f-90cf-465c-81a8-0643f261d136" manual="true" dockArea="right">
@@ -1167,9 +1175,9 @@
           <seg>bus10 : WashingMachine_impl_Instance.washingProcessSys.device_bus -> WashingMachine_impl_Instance.washingProcessSys.door_sens.busAccess</seg>
         </bo>
         <bendpoints>
-          <point x="1286.9998779296875" y="306.9998779296875"/>
-          <point x="2131.00048828125" y="299.999755859375"/>
-          <point x="2129.0" y="-280.9999084472656"/>
+          <point x="1287.0" y="307.0"/>
+          <point x="2131.0" y="300.0"/>
+          <point x="2129.0" y="-281.0"/>
         </bendpoints>
       </element>
       <element uuid="fd2503cc-34cb-4d80-a39a-c25ecfd74fad" manual="true">
@@ -1179,8 +1187,8 @@
           <seg>bus2 : WashingMachine_impl_Instance.washingProcessSys.device_bus -> WashingMachine_impl_Instance.washingProcessSys.motor.busAccess</seg>
         </bo>
         <bendpoints>
-          <point x="872.9999389648438" y="166.99993896484375"/>
-          <point x="867.9999389648438" y="-472.9999084472656"/>
+          <point x="873.0" y="167.0"/>
+          <point x="868.0" y="-473.0"/>
         </bendpoints>
       </element>
       <element uuid="34d5d9b5-fc65-4157-b303-4930ab53a0c1" manual="true">
@@ -1190,8 +1198,8 @@
           <seg>bus3 : WashingMachine_impl_Instance.washingProcessSys.device_bus -> WashingMachine_impl_Instance.washingProcessSys.valve.busAccess</seg>
         </bo>
         <bendpoints>
-          <point x="876.0" y="165.99981689453125"/>
-          <point x="872.9999389648438" y="-180.9999542236328"/>
+          <point x="876.0" y="166.0"/>
+          <point x="873.0" y="-180.99998474121094"/>
         </bendpoints>
       </element>
       <element uuid="43b444f8-59d3-4e1a-85b7-19f5603be0be" manual="true">
@@ -1201,8 +1209,8 @@
           <seg>bus4 : WashingMachine_impl_Instance.washingProcessSys.device_bus -> WashingMachine_impl_Instance.washingProcessSys.pump.busAccess</seg>
         </bo>
         <bendpoints>
-          <point x="872.9999389648438" y="163.9999237060547"/>
-          <point x="872.0000610351562" y="-42.0"/>
+          <point x="873.0" y="164.00001525878906"/>
+          <point x="872.0" y="-41.99998474121094"/>
         </bendpoints>
       </element>
       <element uuid="a65ebccc-be1f-44dc-bc94-23fb023bedab" manual="true">
@@ -1212,7 +1220,7 @@
           <seg>bus5 : WashingMachine_impl_Instance.washingProcessSys.device_bus -> WashingMachine_impl_Instance.washingProcessSys.heater.busAccess</seg>
         </bo>
         <bendpoints>
-          <point x="1011.9998168945312" y="207.9999237060547"/>
+          <point x="1012.0" y="208.00001525878906"/>
         </bendpoints>
       </element>
       <element uuid="70069379-bc8c-4f02-a380-4b4119d849de" manual="true">
@@ -1222,7 +1230,7 @@
           <seg>bus6 : WashingMachine_impl_Instance.washingProcessSys.device_bus -> WashingMachine_impl_Instance.washingProcessSys.heater.busAccess</seg>
         </bo>
         <bendpoints>
-          <point x="1011.9998168945312" y="207.9999237060547"/>
+          <point x="1012.0" y="208.00001525878906"/>
         </bendpoints>
       </element>
       <element uuid="2fa7ebf4-7f27-4e36-8271-1cbb0589e4af" manual="true">
@@ -1232,8 +1240,8 @@
           <seg>bus7 : WashingMachine_impl_Instance.washingProcessSys.device_bus -> WashingMachine_impl_Instance.washingProcessSys.lock.busAccess</seg>
         </bo>
         <bendpoints>
-          <point x="874.9999389648438" y="165.99993896484375"/>
-          <point x="869.0" y="-341.9998779296875"/>
+          <point x="875.0" y="166.0"/>
+          <point x="869.0" y="-342.0"/>
         </bendpoints>
       </element>
       <element uuid="210d9c60-cafd-44a8-a77e-6522ff97f797" manual="true">
@@ -1243,9 +1251,9 @@
           <seg>bus8 : WashingMachine_impl_Instance.washingProcessSys.device_bus -> WashingMachine_impl_Instance.washingProcessSys.water_level_sens.busAccess</seg>
         </bo>
         <bendpoints>
-          <point x="1285.9998779296875" y="306.9999084472656"/>
+          <point x="1286.0" y="307.0"/>
           <point x="2129.0" y="299.0"/>
-          <point x="2127.0" y="-91.99991607666016"/>
+          <point x="2127.0" y="-91.99998474121094"/>
         </bendpoints>
       </element>
       <element uuid="0b783bd2-5067-4531-aa8d-bccf0ba98c8a" manual="true">
@@ -1256,7 +1264,7 @@
         </bo>
         <bendpoints>
           <point x="1283.0" y="304.0"/>
-          <point x="2050.0" y="299.999755859375"/>
+          <point x="2050.0" y="300.0"/>
         </bendpoints>
       </element>
       <element uuid="441e557f-f4c7-4dd8-b6d7-e8baefae77cb" manual="true">
@@ -1521,7 +1529,7 @@
         <seg>component_instance</seg>
         <seg>washingProcessSys</seg>
       </bo>
-      <position x="60.00000000000023" y="50.0"/>
+      <position x="60.0" y="50.0"/>
       <size width="1290.0" height="1160.0"/>
     </element>
     <element uuid="84e58a70-81ef-492c-ba31-585a486688bb" manual="true">
@@ -1745,7 +1753,7 @@
           <seg>42a94c74-e8f5-4675-8333-3bd951faa99d</seg>
         </bo>
         <bendpoints>
-          <point x="2181.00048828125" y="-177.99993896484375"/>
+          <point x="2181.0" y="-178.0"/>
         </bendpoints>
       </element>
       <bo>

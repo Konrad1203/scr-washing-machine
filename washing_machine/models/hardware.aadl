@@ -122,7 +122,8 @@ public
 	
 	device UserPannel -- (screen with mode knob)
 		features
-			washingDataOut: out data port Types::WashingData; -- getting user selection
+			washingDataOut: out data port Types::WashingData; -- sending user selection to washing process processor
+			washingDataOut2: out data port Types::WashingData; -- sending user selection for saving
 			washingDataIn: in data port Types::WashingData;  -- for display (from memory)
 			pauseStartOut: out event port; -- for sending signal if user want to pause or restart washing
 			errorCodeIn: in data port Types::ErrorCode;

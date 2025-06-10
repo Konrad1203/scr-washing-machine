@@ -29,7 +29,7 @@ public
 			c2: port errorCodeIn -> pannel.errorCodeIn;
 			c3: port pannel.washingDataOut -> userSettingsOut;
 			c4: port usr_panel_process.washingDataOut -> pannel.washingDataIn;
-			c5: port pannel.washingDataOut -> usr_panel_process.washingDataIn;
+			c5: port pannel.washingDataOut2 -> usr_panel_process.washingDataIn;
 			c6: port washingFinishedIn -> usr_panel_process.washingFinishedIn;
 			c7: port pannel.pauseStartOut -> pauseStartOut;
 			
