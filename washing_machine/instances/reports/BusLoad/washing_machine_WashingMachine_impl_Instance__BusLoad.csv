@@ -1,0 +1,119 @@
+Bus load analysis of WashingMachine_impl_Instance
+
+
+"Physical Bus","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"sys_bus","0.0","0.0","0.0","0.0"
+"screen_bus","0.0","0.0","0.0","0.0"
+"device_bus","0.0","0.0","0.0","0.0016666666666666666"
+
+"Bus sys_bus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"userPannelSys.pannel.washingDataOut -> washingProcessSys.central_process.user_ctrl.userSettingsIn","","0.0","","0.0"
+"userPannelSys.pannel.pauseStartOut -> washingProcessSys.central_process.pauseStartIn","","0.0","","0.0"
+"washingProcessSys.central_process.errorCodeOut -> userPannelSys.pannel.errorCodeIn","","0.0","","0.0"
+"washingProcessSys.central_process.washingFinishedOut -> userPannelSys.usr_panel_process.after_finished_thread.washingFinishedIn","","0.0","","0.0"
+"washingProcessSys.central_process.washingFinishedOut -> userPannelSys.usr_panel_process.after_finished_thread.washingFinishedIn","","0.0","","0.0"
+
+"WARNING: Bus sys_bus has no capacity"
+"WARNING: Bus sys_bus has no bandwidth budget"
+
+"Connection userPannelSys.pannel.washingDataOut -> washingProcessSys.central_process.user_ctrl.userSettingsIn bound to sys_bus"
+"WARNING: Connection userPannelSys.pannel.washingDataOut -> washingProcessSys.central_process.user_ctrl.userSettingsIn has no bandwidth budget"
+
+"Connection userPannelSys.pannel.pauseStartOut -> washingProcessSys.central_process.pauseStartIn bound to sys_bus"
+"WARNING: Connection userPannelSys.pannel.pauseStartOut -> washingProcessSys.central_process.pauseStartIn has no bandwidth budget"
+
+"Connection washingProcessSys.central_process.errorCodeOut -> userPannelSys.pannel.errorCodeIn bound to sys_bus"
+"WARNING: Connection washingProcessSys.central_process.errorCodeOut -> userPannelSys.pannel.errorCodeIn has no bandwidth budget"
+
+"Connection washingProcessSys.central_process.washingFinishedOut -> userPannelSys.usr_panel_process.after_finished_thread.washingFinishedIn bound to sys_bus"
+"WARNING: Connection washingProcessSys.central_process.washingFinishedOut -> userPannelSys.usr_panel_process.after_finished_thread.washingFinishedIn has no bandwidth budget"
+
+"Connection washingProcessSys.central_process.washingFinishedOut -> userPannelSys.usr_panel_process.after_finished_thread.washingFinishedIn bound to sys_bus"
+"WARNING: Connection washingProcessSys.central_process.washingFinishedOut -> userPannelSys.usr_panel_process.after_finished_thread.washingFinishedIn has no bandwidth budget"
+
+"Bus screen_bus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"pannel.washingDataOut -> usr_panel_process.memory_manager_thread.washingDataIn","","0.0","","0.0"
+"usr_panel_process.memory_manager_thread.washingDataOut -> pannel.washingDataIn","","0.0","","0.0"
+
+"WARNING: Bus screen_bus has no capacity"
+"WARNING: Bus screen_bus has no bandwidth budget"
+
+"Connection pannel.washingDataOut -> usr_panel_process.memory_manager_thread.washingDataIn bound to screen_bus"
+"WARNING: Connection pannel.washingDataOut -> usr_panel_process.memory_manager_thread.washingDataIn has no bandwidth budget"
+
+"Connection usr_panel_process.memory_manager_thread.washingDataOut -> pannel.washingDataIn bound to screen_bus"
+"WARNING: Connection usr_panel_process.memory_manager_thread.washingDataOut -> pannel.washingDataIn has no bandwidth budget"
+
+"Bus device_bus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"motor.broken -> central_process.motor_broken","","0.0","","0.0"
+"valve.broken -> central_process.valve_broken","","0.0","","0.0"
+"pump.broken -> central_process.pump_broken","","0.0","","0.0"
+"heater.broken -> central_process.heater_broken","","0.0","","0.0"
+"lock.broken -> central_process.door_lock_broken","","0.0","","0.0"
+"water_level_sens.waterLevel -> central_process.water_ctrl.waterLevel","","0.0","","0.001"
+"water_level_sens.broken -> central_process.level_sensor_broken","","0.0","","0.0"
+"temp_sens.tempOut -> central_process.heat_ctrl.currentTemp","","0.0","","6.666666666666666E-4"
+"temp_sens.broken -> central_process.temp_sensor_broken","","0.0","","0.0"
+"door_sens.isClosed -> central_process.safety_ctrl.doorClosed","","0.0","","0.0"
+"door_sens.broken -> central_process.door_closed_sensor_broken","","0.0","","0.0"
+"central_process.water_ctrl.valveCtrl -> valve.openCloseValve","","0.0","","0.0"
+"central_process.water_ctrl.pumpCtrl -> pump.onOffPump","","0.0","","0.0"
+"central_process.drum_ctrl.rotSpeedCtrl -> motor.rotations","","0.0","","0.0"
+"central_process.heat_ctrl.heatCtrl -> heater.onOffHeater","","0.0","","0.0"
+"central_process.safety_ctrl.lockCtrl -> lock.openCloseLock","","0.0","","0.0"
+
+"WARNING: Bus device_bus has no capacity"
+"WARNING: Bus device_bus has no bandwidth budget"
+
+"Connection motor.broken -> central_process.motor_broken bound to device_bus"
+"WARNING: Connection motor.broken -> central_process.motor_broken has no bandwidth budget"
+
+"Connection valve.broken -> central_process.valve_broken bound to device_bus"
+"WARNING: Connection valve.broken -> central_process.valve_broken has no bandwidth budget"
+
+"Connection pump.broken -> central_process.pump_broken bound to device_bus"
+"WARNING: Connection pump.broken -> central_process.pump_broken has no bandwidth budget"
+
+"Connection heater.broken -> central_process.heater_broken bound to device_bus"
+"WARNING: Connection heater.broken -> central_process.heater_broken has no bandwidth budget"
+
+"Connection lock.broken -> central_process.door_lock_broken bound to device_bus"
+"WARNING: Connection lock.broken -> central_process.door_lock_broken has no bandwidth budget"
+
+"Connection water_level_sens.waterLevel -> central_process.water_ctrl.waterLevel bound to device_bus"
+"WARNING: Connection water_level_sens.waterLevel -> central_process.water_ctrl.waterLevel has no bandwidth budget"
+
+"Connection water_level_sens.broken -> central_process.level_sensor_broken bound to device_bus"
+"WARNING: Connection water_level_sens.broken -> central_process.level_sensor_broken has no bandwidth budget"
+
+"Connection temp_sens.tempOut -> central_process.heat_ctrl.currentTemp bound to device_bus"
+"WARNING: Connection temp_sens.tempOut -> central_process.heat_ctrl.currentTemp has no bandwidth budget"
+
+"Connection temp_sens.broken -> central_process.temp_sensor_broken bound to device_bus"
+"WARNING: Connection temp_sens.broken -> central_process.temp_sensor_broken has no bandwidth budget"
+
+"Connection door_sens.isClosed -> central_process.safety_ctrl.doorClosed bound to device_bus"
+"WARNING: Connection door_sens.isClosed -> central_process.safety_ctrl.doorClosed has no bandwidth budget"
+
+"Connection door_sens.broken -> central_process.door_closed_sensor_broken bound to device_bus"
+"WARNING: Connection door_sens.broken -> central_process.door_closed_sensor_broken has no bandwidth budget"
+
+"Connection central_process.water_ctrl.valveCtrl -> valve.openCloseValve bound to device_bus"
+"WARNING: Connection central_process.water_ctrl.valveCtrl -> valve.openCloseValve has no bandwidth budget"
+
+"Connection central_process.water_ctrl.pumpCtrl -> pump.onOffPump bound to device_bus"
+"WARNING: Connection central_process.water_ctrl.pumpCtrl -> pump.onOffPump has no bandwidth budget"
+
+"Connection central_process.drum_ctrl.rotSpeedCtrl -> motor.rotations bound to device_bus"
+"WARNING: Connection central_process.drum_ctrl.rotSpeedCtrl -> motor.rotations has no bandwidth budget"
+
+"Connection central_process.heat_ctrl.heatCtrl -> heater.onOffHeater bound to device_bus"
+"WARNING: Connection central_process.heat_ctrl.heatCtrl -> heater.onOffHeater has no bandwidth budget"
+
+"Connection central_process.safety_ctrl.lockCtrl -> lock.openCloseLock bound to device_bus"
+"WARNING: Connection central_process.safety_ctrl.lockCtrl -> lock.openCloseLock has no bandwidth budget"
+
+

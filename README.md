@@ -93,7 +93,60 @@ System odwzorowuje podstawowe cykle prania i obsługiwany jest przez użytkownik
 [A] Sum of weights (8,380 kg) is below weight limit of 10,000 kg (16,2 % Weight slack)
 
 
+### Not Bound Resource Budget Analysis
 
+  MIPS capacity 2,400 MIPS : MIPS budget 2,000 MIPS  
+  2 out of 2 with MIPS capacity  
+*   4 out of 11 with MIPS budget  
+
+Detailed Processor MIPS Capacity Report:
+
+Component,Capacity  
+processor userPannelSys.screen_cpu, 1,400 MIPS,  
+processor washingProcessSys.cpu, 1,000 MIPS,  
+Total, 2,400 MIPS,  
+
+Detailed MIPS Budget Report:
+
+Component,Budget,Actual,Notes  
+  device userPannelSys.pannel,   0,000 MIPS,  0,000 MIPS,  
+    thread userPannelSys.usr_panel_process.after_finished_thread,     0,000 MIPS,    0,000 MIPS,  
+    thread userPannelSys.usr_panel_process.memory_manager_thread,     0,000 MIPS,    0,000 MIPS,  
+  process userPannelSys.usr_panel_process,   1,200 MIPS,  0,000 MIPS,process WashingMachine_impl_Instance.userPannelSys.usr_panel_process total 0,000 MIPS below budget 1,200 MIPS (100,0 % slack)  
+system userPannelSys, 0,000 MIPS,1,200 MIPS,  
+  device washingProcessSys.motor,   0,000 MIPS,  0,000 MIPS,  
+  device washingProcessSys.valve,   0,000 MIPS,  0,000 MIPS,  
+  device washingProcessSys.pump,   0,000 MIPS,  0,000 MIPS,  
+  device washingProcessSys.heater,   0,000 MIPS,  0,000 MIPS,  
+  device washingProcessSys.lock,   0,000 MIPS,  0,000 MIPS,  
+  device washingProcessSys.water_level_sens,   0,000 MIPS,  0,000 MIPS,  
+  device washingProcessSys.temp_sens,   0,000 MIPS,  0,000 MIPS,  
+  device washingProcessSys.door_sens,   0,000 MIPS,  0,000 MIPS,  
+    thread washingProcessSys.central_process.water_ctrl,     0,000 MIPS,    0,000 MIPS,  
+    thread washingProcessSys.central_process.drum_ctrl,     0,000 MIPS,    0,000 MIPS,  
+    thread washingProcessSys.central_process.heat_ctrl,     0,000 MIPS,    0,000 MIPS,  
+    thread washingProcessSys.central_process.safety_ctrl,     0,000 MIPS,    0,000 MIPS,  
+    thread washingProcessSys.central_process.user_ctrl,     0,000 MIPS,    0,000 MIPS,  
+  process washingProcessSys.central_process,   0,800 MIPS,  0,000 MIPS,process WashingMachine_impl_Instance.washingProcessSys.central_process total 0,000 MIPS below budget 0,800 MIPS (100,0 % slack)  
+system washingProcessSys, 0,000 MIPS,0,800 MIPS,  
+Total, ,2,000 MIPS,
+
+## BusLoad Analysis
+
+Tutaj chyba nie do końca się udało
+
+"Physical Bus","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"  
+"sys_bus","0.0","0.0","0.0","0.0"  
+"screen_bus","0.0","0.0","0.0","0.0"  
+"device_bus","0.0","0.0","0.0","0.0016666666666666666"
+
+"Bus sys_bus has data overhead of 0 bytes"  
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"  
+"userPannelSys.pannel.washingDataOut -> washingProcessSys.central_process.user_ctrl.userSettingsIn","","0.0","","0.0"  
+"userPannelSys.pannel.pauseStartOut -> washingProcessSys.central_process.pauseStartIn","","0.0","","0.0"  
+"washingProcessSys.central_process.errorCodeOut -> userPannelSys.pannel.errorCodeIn","","0.0","","0.0"  
+"washingProcessSys.central_process.washingFinishedOut -> userPannelSys.usr_panel_process.after_finished_thread.washingFinishedIn","","0.0","","0.0"  
+"washingProcessSys.central_process.washingFinishedOut -> userPannelSys.usr_panel_process.after_finished_thread.washingFinishedIn","","0.0","","0.0"
 
 ## Literatura
 1. https://github.com/GaloisInc/CASE-AADL-Tutorial
